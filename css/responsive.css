@@ -139,6 +139,7 @@ html, body {
     }
 
     /* Multi-column Detail and Form Layouts stack on Tablet */
+    .home-contact-grid,
     .details-two-col-layout,
     .package-details-layout,
     .customize-builder-layout,
@@ -348,6 +349,53 @@ html, body {
         padding: 6px 8px;
     }
 
+    /* Mobile Form Cards & Contact Layout */
+    .home-contact-grid,
+    .contact-page-layout,
+    .customize-builder-layout {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .contact-box-card {
+        padding: 24px 18px !important;
+        border-radius: var(--radius-md) !important;
+        margin-bottom: 20px;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .btn {
+        white-space: normal !important;
+        line-height: 1.35 !important;
+    }
+
+    .btn-lg {
+        padding: 13px 18px !important;
+        font-size: 0.95rem !important;
+    }
+
+    .page-banner-title {
+        font-size: 1.95rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .custom-tour-banner {
+        padding: 30px 18px !important;
+        border-radius: var(--radius-md) !important;
+        gap: 24px !important;
+    }
+
+    .custom-form-card {
+        padding: 24px 18px !important;
+        border-radius: var(--radius-md) !important;
+    }
+
+    .about-office-grid {
+        padding: 30px 18px !important;
+        border-radius: var(--radius-md) !important;
+    }
+
     /* Floating Action Buttons: Sleek, non-obstructive 48px circles */
     .dt-whatsapp-float {
         bottom: 18px;
@@ -450,6 +498,70 @@ html, body {
         min-width: 210px;
         max-width: calc(100vw - 24px);
     }
+
+    /* Small Mobile Form & Card Refinements */
+    .contact-box-card {
+        padding: 20px 14px !important;
+        border-radius: var(--radius-sm) !important;
+    }
+
+    .contact-box-card h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 16px !important;
+    }
+
+    .custom-tour-banner {
+        padding: 22px 12px !important;
+        border-radius: var(--radius-sm) !important;
+        gap: 20px !important;
+    }
+
+    .custom-tour-banner h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .custom-form-card {
+        padding: 20px 14px !important;
+        border-radius: var(--radius-sm) !important;
+    }
+
+    .custom-form-card h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 14px !important;
+    }
+
+    .about-office-grid {
+        padding: 22px 14px !important;
+        border-radius: var(--radius-sm) !important;
+    }
+
+    .page-banner-title {
+        font-size: 1.65rem !important;
+    }
+
+    .btn-lg {
+        padding: 12px 14px !important;
+        font-size: 0.92rem !important;
+    }
+
+    .dt-whatsapp-float {
+        bottom: 14px !important;
+        left: 12px !important;
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    .dt-whatsapp-float i {
+        font-size: 1.3rem !important;
+    }
+
+    .dt-chatbot-launcher {
+        bottom: 14px !important;
+        right: 12px !important;
+        width: 44px !important;
+        height: 44px !important;
+    }
 }
 
 /* 5. Extra Small Mobiles (360px and below) */
@@ -466,6 +578,23 @@ html, body {
     .mobile-nav-drawer {
         width: 260px;
         max-width: 84vw;
+    }
+
+    .contact-box-card {
+        padding: 16px 10px !important;
+    }
+
+    .custom-tour-banner {
+        padding: 18px 8px !important;
+    }
+
+    .custom-form-card {
+        padding: 16px 10px !important;
+    }
+
+    .form-control {
+        font-size: 0.84rem !important;
+        padding: 9px 10px !important;
     }
 }
 

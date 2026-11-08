@@ -237,7 +237,7 @@
     <div style="background:linear-gradient(rgba(13,30,42,0.72), rgba(20,43,59,0.85)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; padding:65px 0; color:#ffffff; text-align:center;">
         <div class="container">
             <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--color-gold); font-weight:700; display:block; margin-bottom:8px;">Bespoke Holiday Planning</span>
-            <h1 style="color:#ffffff; font-size:2.8rem; margin-bottom:10px;">Tailor-Made Tour Consultation</h1>
+            <h1 class="page-banner-title">Tailor-Made Tour Consultation</h1>
             <p style="color:#e2e8f0; font-size:1.1rem; max-width:640px; margin:0 auto;">
                 Tell us where you dream to go. Our seasoned planners in Worli, Mumbai will build an itinerary matching your exact dates, pace, and lifestyle.
             </p>
@@ -247,17 +247,17 @@
     <!-- Main Custom Builder Section -->
     <section class="section-padding">
         <div class="container">
-            <div class="customize-builder-layout" style="display:grid; grid-template-columns:1.8fr 1.2fr; gap:40px; align-items:start;">
+            <div class="customize-builder-layout">
                 
                 <!-- Left: Form -->
-                <div style="background:#ffffff; border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:36px; box-shadow:var(--shadow-md);">
+                <div class="contact-box-card">
                     <h2 style="font-size:1.6rem; color:var(--color-navy); margin-bottom:6px;">Tell Us About Your Travel Plans</h2>
                     <p style="font-size:0.92rem; color:var(--color-muted); margin-bottom:28px;">
                         Fill in this form and our senior holiday consultant will reach out via WhatsApp/Call with a detailed proposal within 2 hours.
                     </p>
 
                     <form id="custom-tour-form">
-                        <div class="form-row-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+                        <div class="form-row-2col">
                             <div class="form-group">
                                 <label class="form-label">Full Name *</label>
                                 <input type="text" id="cust-name" class="form-control" placeholder="e.g. Anand Kulkarni" required>
@@ -268,7 +268,7 @@
                             </div>
                         </div>
 
-                        <div class="form-row-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+                        <div class="form-row-2col">
                             <div class="form-group">
                                 <label class="form-label">Email Address *</label>
                                 <input type="email" id="cust-email" class="form-control" placeholder="name@domain.com" required>
@@ -279,7 +279,7 @@
                             </div>
                         </div>
 
-                        <div class="form-row-2col" style="display:grid; grid-template-columns:1.3fr 1fr; gap:18px;">
+                        <div class="form-row-2col">
                             <div class="form-group">
                                 <label class="form-label">Target Destination(s) *</label>
                                 <input type="text" id="cust-destination" class="form-control" placeholder="e.g. Rajasthan + Agra, Kerala Munnar, Thailand" required>
@@ -290,7 +290,7 @@
                             </div>
                         </div>
 
-                        <div class="form-row-3col" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
+                        <div class="form-row-3col">
                             <div class="form-group">
                                 <label class="form-label">Travellers</label>
                                 <select id="cust-travellers" class="form-control">
@@ -323,9 +323,9 @@
 
                         <!-- Special Heritage "मी मावळा" check -->
                         <div id="mimavala" style="background:var(--color-sand-light); border:1.5px solid var(--color-gold); border-radius:var(--radius-md); padding:16px; margin-bottom:18px;">
-                            <label style="display:flex; align-items:center; gap:10px; font-weight:700; color:var(--color-navy); cursor:pointer;">
-                                <input type="checkbox" id="check-mimavala" style="width:18px; height:18px;">
-                                <span><span style="color:#c2410c;">मी मावळा हेरिटेज विशेष:</span> Interested in Chhatrapati Shivaji Maharaj Forts / Konkan Sea-Forts / Ashtavinayak Pilgrimage</span>
+                            <label style="display:flex; align-items:flex-start; gap:10px; font-weight:700; color:var(--color-navy); cursor:pointer;">
+                                <input type="checkbox" id="check-mimavala" style="width:18px; height:18px; margin-top:3px; flex-shrink:0;">
+                                <span style="font-size:0.9rem; line-height:1.45;"><span style="color:#c2410c;">मी मावळा हेरिटेज विशेष:</span> Interested in Chhatrapati Shivaji Maharaj Forts / Konkan Sea-Forts / Ashtavinayak Pilgrimage</span>
                             </label>
                         </div>
 
@@ -349,7 +349,7 @@
 
                 <!-- Right: Benefits & Testimonial Column -->
                 <div>
-                    <div style="background:#ffffff; border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:30px; margin-bottom:24px; box-shadow:var(--shadow-sm);">
+                    <div class="contact-box-card" style="margin-bottom:24px;">
                         <h3 style="font-size:1.3rem; margin-bottom:16px; color:var(--color-navy);">How Custom Planning Works</h3>
                         
                         <div style="display:flex; gap:14px; margin-bottom:18px;">
@@ -378,7 +378,7 @@
                     </div>
 
                     <!-- Direct Contact Card -->
-                    <div style="background:var(--color-sand-light); border:1px solid rgba(185,154,98,0.3); border-radius:var(--radius-lg); padding:28px;">
+                    <div class="contact-box-card" style="background:var(--color-sand-light); border:1px solid rgba(185,154,98,0.3);">
                         <h4 style="font-size:1.15rem; color:var(--color-navy); margin-bottom:8px;">Prefer to Speak Directly?</h4>
                         <p style="font-size:0.88rem; color:#4b5563; margin-bottom:18px;">
                             Our travel planners are available Monday through Saturday at our Worli office.
