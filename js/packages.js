@@ -336,7 +336,7 @@ function renderPackageCardHTML(pkg) {
                             ₹${formattedPrice} <span class="pkg-price-unit">${perPersonText}</span>
                         </div>
                     </div>
-                    <div style="display:flex; gap:8px;">
+                    <div class="pkg-card-actions">
                         <a href="package-details.html?id=${pkg.id}" class="btn btn-sm btn-outline-navy" title="View Full Itinerary">
                             ${detailsText}
                         </a>

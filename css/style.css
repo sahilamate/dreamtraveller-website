@@ -1667,29 +1667,50 @@ p:last-child {
     padding-top: 16px;
     border-top: 1px solid var(--color-border-light);
     margin-top: auto;
+    gap: 12px;
 }
 
 .pkg-price-block {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .pkg-price-original {
     font-size: 0.8rem;
     color: var(--color-muted-light);
     text-decoration: line-through;
+    line-height: 1.2;
+    margin-bottom: 2px;
 }
 
 .pkg-price-current {
     font-size: 1.35rem;
     font-weight: 700;
     color: var(--color-navy);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    white-space: nowrap;
+    line-height: 1.2;
 }
 
 .pkg-price-unit {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--color-muted);
     font-weight: 400;
+    white-space: nowrap;
+}
+
+.pkg-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.pkg-card-actions .btn {
+    white-space: nowrap;
 }
 
 /* Package Filter Bar */
