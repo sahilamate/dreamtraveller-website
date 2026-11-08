@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports &amp; Analytics | Dream Travelkar Admin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="https://dreamtravelkar.co.in/images/logo.png">
+</head>
+<body class="admin-body">
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <div class="admin-brand-icon">DT</div>
+                <div><div class="admin-brand-title">Dream Travelkar</div><div class="admin-brand-sub">Business System</div></div>
+            </div>
+            <div class="admin-nav-section">
+                <div class="admin-nav-label">Main Navigation</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="admin-dashboard.html"><i class="fa fa-dashboard"></i> Overview</a></li>
+                    <li class="admin-nav-item"><a href="manage-packages.html"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
+                    <li class="admin-nav-item"><a href="add-package.html"><i class="fa fa-plus-circle"></i> Add New Package</a></li>
+                    <li class="admin-nav-item"><a href="manage-destinations.html"><i class="fa fa-map-marker"></i> Destinations</a></li>
+                </ul>
+                <div class="admin-nav-label" style="margin-top:16px;">CRM &amp; Operations</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="manage-enquiries.html"><i class="fa fa-inbox"></i> Enquiries / Leads</a></li>
+                    <li class="admin-nav-item"><a href="manage-customers.html"><i class="fa fa-users"></i> Customers</a></li>
+                    <li class="admin-nav-item"><a href="manage-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
+                    <li class="admin-nav-item"><a href="manage-payments.html"><i class="fa fa-credit-card"></i> Payments</a></li>
+                </ul>
+                <div class="admin-nav-label" style="margin-top:16px;">Partners &amp; Settings</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="manage-hotels.html"><i class="fa fa-hotel"></i> Hotels</a></li>
+                    <li class="admin-nav-item"><a href="manage-suppliers.html"><i class="fa fa-bus"></i> Transport Suppliers</a></li>
+                    <li class="admin-nav-item active"><a href="reports.html"><i class="fa fa-bar-chart"></i> Reports &amp; Analytics</a></li>
+                    <li class="admin-nav-item"><a href="website-settings.html"><i class="fa fa-cog"></i> Website Settings</a></li>
+                </ul>
+            </div>
+            <div class="admin-sidebar-footer">
+                <div class="admin-user-pill">
+                    <div class="admin-avatar">AD</div>
+                    <div class="admin-user-meta"><div class="admin-user-name">Operations Lead</div><div class="admin-user-role">Super Admin</div></div>
+                </div>
+                <a href="#" id="admin-logout-btn" title="Logout" style="color:#ef4444;"><i class="fa fa-power-off"></i></a>
+            </div>
+        </aside>
+
+        <main class="admin-main" id="admin-reports-view">
+            <header class="admin-topbar">
+                <div class="admin-page-title">
+                    <h1>Operational Reports &amp; Performance</h1>
+                    <p>Enquiry conversion ratios, destination popularity distribution, and sales metrics</p>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <!-- Summary KPI Row -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-info-block">
+                            <span>Total Leads Logged</span>
+                            <h3 id="report-total-leads">12</h3>
+                        </div>
+                        <div class="kpi-icon-box kpi-icon-blue"><i class="fa fa-envelope-o"></i></div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-info-block">
+                            <span>Confirmed Bookings</span>
+                            <h3 id="report-total-bookings">8</h3>
+                        </div>
+                        <div class="kpi-icon-box kpi-icon-green"><i class="fa fa-check-circle"></i></div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-info-block">
+                            <span>Conversion Efficiency</span>
+                            <h3 id="report-conversion-rate" style="color:#16a34a;">66.7%</h3>
+                        </div>
+                        <div class="kpi-icon-box kpi-icon-gold"><i class="fa fa-line-chart"></i></div>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3>Popular Destination Distribution</h3>
+                        </div>
+                        <div class="admin-card-body" style="height:320px; position:relative;">
+                            <canvas id="report-dest-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3>Quarterly Operations Summary</h3>
+                        </div>
+                        <div class="admin-card-body">
+                            <ul style="list-style:none; padding:0; line-height:2.2; font-size:0.92rem;">
+                                <li><i class="fa fa-check" style="color:#16a34a;"></i> <strong>Highest Inquiring Circuit:</strong> Rajasthan Royal Circuit (38%)</li>
+                                <li><i class="fa fa-check" style="color:#16a34a;"></i> <strong>Most Booked Domestic Tour:</strong> Kerala Backwaters &amp; Munnar</li>
+                                <li><i class="fa fa-check" style="color:#16a34a;"></i> <strong>Leading International Tour:</strong> Thailand Bangkok-Pattaya</li>
+                                <li><i class="fa fa-check" style="color:#16a34a;"></i> <strong>Average Booking Lead Time:</strong> 18 Days prior to departure</li>
+                                <li><i class="fa fa-check" style="color:#16a34a;"></i> <strong>Top Origin Hub:</strong> Mumbai &amp; Pune Suburban Area</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

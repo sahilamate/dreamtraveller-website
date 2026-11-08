@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Payments | Dream Travelkar Admin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/customer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="https://dreamtravelkar.co.in/images/logo.png">
+</head>
+<body class="admin-body">
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <div class="admin-brand-icon">DT</div>
+                <div><div class="admin-brand-title">Dream Travelkar</div><div class="admin-brand-sub">Business System</div></div>
+            </div>
+            <div class="admin-nav-section">
+                <div class="admin-nav-label">Main Navigation</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="admin-dashboard.html"><i class="fa fa-dashboard"></i> Overview</a></li>
+                    <li class="admin-nav-item"><a href="manage-packages.html"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
+                    <li class="admin-nav-item"><a href="add-package.html"><i class="fa fa-plus-circle"></i> Add New Package</a></li>
+                    <li class="admin-nav-item"><a href="manage-destinations.html"><i class="fa fa-map-marker"></i> Destinations</a></li>
+                </ul>
+                <div class="admin-nav-label" style="margin-top:16px;">CRM &amp; Operations</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="manage-enquiries.html"><i class="fa fa-inbox"></i> Enquiries / Leads</a></li>
+                    <li class="admin-nav-item"><a href="manage-customers.html"><i class="fa fa-users"></i> Customers</a></li>
+                    <li class="admin-nav-item"><a href="manage-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
+                    <li class="admin-nav-item active"><a href="manage-payments.html"><i class="fa fa-credit-card"></i> Payments</a></li>
+                </ul>
+                <div class="admin-nav-label" style="margin-top:16px;">Partners &amp; Settings</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="manage-hotels.html"><i class="fa fa-hotel"></i> Hotels</a></li>
+                    <li class="admin-nav-item"><a href="manage-suppliers.html"><i class="fa fa-bus"></i> Transport Suppliers</a></li>
+                    <li class="admin-nav-item"><a href="reports.html"><i class="fa fa-bar-chart"></i> Reports &amp; Analytics</a></li>
+                    <li class="admin-nav-item"><a href="website-settings.html"><i class="fa fa-cog"></i> Website Settings</a></li>
+                </ul>
+            </div>
+            <div class="admin-sidebar-footer">
+                <div class="admin-user-pill">
+                    <div class="admin-avatar">AD</div>
+                    <div class="admin-user-meta"><div class="admin-user-name">Operations Lead</div><div class="admin-user-role">Super Admin</div></div>
+                </div>
+                <a href="#" id="admin-logout-btn" title="Logout" style="color:#ef4444;"><i class="fa fa-power-off"></i></a>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <div class="admin-page-title">
+                    <h1>Payment Transaction Records</h1>
+                    <p>Demonstration transaction log of advance tokens and settled balances</p>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>Simulated Payment Transactions</h3>
+                        <span style="font-size:0.75rem; color:#166534; background:#dcfce7; padding:4px 8px; border-radius:4px;">
+                            <i class="fa fa-lock"></i> Secured Frontend Demo Records
+                        </span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction ID</th>
+                                    <th>Booking Ref</th>
+                                    <th>Customer</th>
+                                    <th>Amount Paid (₹)</th>
+                                    <th>Payment Channel</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Voucher Receipt</th>
+                                </tr>
+                            </thead>
+                            <tbody id="payments-admin-tbody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/bookings.js"></script>
+    <script src="js/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tbody = document.getElementById('payments-admin-tbody');
+            if (!tbody) return;
+            const bookings = StorageManager.getBookings();
+            tbody.innerHTML = bookings.map(b => `
+                <tr>
+                    <td><strong>TXN-${b.id.replace('BK-', '88')}</strong></td>
+                    <td><a href="manage-bookings.html" style="color:var(--color-ocean); font-weight:600;">${b.id}</a></td>
+                    <td><strong>${b.customerName}</strong><br><small style="color:#64748b;">${b.customerPhone}</small></td>
+                    <td><strong style="color:#16a34a;">₹${Number(b.advancePaid || 0).toLocaleString('en-IN')}</strong></td>
+                    <td>${b.paymentMethod || 'Online UPI'}</td>
+                    <td>${StorageManager.formatDate(b.createdAt)}</td>
+                    <td><span class="badge badge-confirmed">Settled (Demo)</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-navy" onclick="BookingController.showInvoiceModal('${b.id}')">
+                            <i class="fa fa-print"></i> Invoice
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        });
+    </script>
+</body>
+</html>

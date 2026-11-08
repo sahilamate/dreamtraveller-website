@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dream Travelkar - Worli, Mumbai</title>
+    <meta name="description" content="Get in touch with Dream Travelkar. Visit our Worli office in Mumbai, call our travel hotlines, or chat directly via WhatsApp for holiday bookings.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="https://dreamtravelkar.co.in/images/logo.png">
+</head>
+<body>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="site-main-header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- 1. LEFT: Company Logo -->
+                <div class="navbar-brand-section">
+                    <a href="index.html" class="logo-wrapper" title="Dream Travelkar - Premium Holidays">
+                        <img src="https://dreamtravelkar.co.in/images/logo.png" alt="Dream Travelkar Logo" class="site-logo" onerror="this.style.display='none'; document.getElementById('logo-text-box').style.display='flex';">
+                        <div id="logo-text-box" class="logo-fallback-text" style="display:none;">
+                            <span class="logo-brand-name">Dream Travelkar</span>
+                            <span class="logo-brand-tagline">Premium Holidays &amp; Tours</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 2. CENTER: Navigation Links -->
+                <nav class="navbar-nav-section" id="desktop-navbar" aria-label="Main Navigation">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        
+                        <!-- Destinations Category Dropdown -->
+                        <li class="nav-item has-dropdown" id="nav-item-destinations">
+                            <a href="destinations.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                                Destinations <i class="fa fa-angle-down nav-caret"></i>
+                            </a>
+                            <div class="mega-dest-dropdown" role="menu">
+                                <div class="dropdown-cols-wrapper">
+                                    <div class="dropdown-col">
+                                        <div class="dropdown-header">
+                                            <i class="fa fa-map-marker"></i> Incredible India
+                                        </div>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-rajasthan">Rajasthan Forts &amp; Deserts <span class="dropdown-badge">Popular</span></a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-kerala">Kerala Backwaters &amp; Munnar <span class="dropdown-badge">Bestseller</span></a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-himachal">Himachal Pradesh (Manali/Shimla)</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-andaman">Andaman Coral Islands</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-konkan">Dream Konkan &amp; Sindhudurg</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-kashmir">Majestic Kashmir Valley</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-col">
+                                        <div class="dropdown-header">
+                                            <i class="fa fa-globe"></i> World Holidays
+                                        </div>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-thailand">Thailand (Bangkok &amp; Pattaya)</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-dubai">Dubai Desert &amp; Skylines</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-bali">Bali Tropical Paradise</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-switzerland">Switzerland Alpine Grandeur</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-singapore">Singapore &amp; Sentosa</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-vietnam">Vietnam &amp; Ha Long Bay</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-footer-bar">
+                                    <a href="destinations.html">Explore All 12+ Destinations &rarr;</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a href="packages.html" class="nav-link">Tour Packages</a></li>
+                        <li class="nav-item"><a href="customize-tour.html" class="nav-link">Customize Tour</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+                        <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- 3. RIGHT: Actions (Language, Customer Account, Plan Your Trip CTA) -->
+                <div class="navbar-actions-section">
+                    <!-- Language Selector with Marathi / मी मावळा -->
+                    <div class="nav-action-item nav-lang-dropdown" id="nav-lang-dropdown">
+                        <button type="button" class="lang-trigger-btn" aria-haspopup="true" aria-expanded="false" title="Language Selector">
+                            <i class="fa fa-language"></i>
+                            <span class="current-lang-label">मी मावळा</span>
+                            <i class="fa fa-angle-down nav-caret"></i>
+                        </button>
+                        <div class="lang-menu" role="menu">
+                            <a href="javascript:void(0)" class="lang-option active" data-lang="mr">
+                                <span class="lang-name">मराठी (मी मावळा)</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="lang-option" data-lang="en">
+                                <span class="lang-name">English</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="lang-option" data-lang="hi">
+                                <span class="lang-name">हिन्दी (Hindi)</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Customer Account Dropdown (Priya) -->
+                    <div class="nav-action-item nav-account-dropdown" id="nav-account-dropdown">
+                        <button type="button" class="account-user-trigger" aria-haspopup="true" aria-expanded="false" title="Customer Account">
+                            <span class="account-avatar-icon"><i class="fa fa-user-circle"></i></span>
+                            <span class="account-name">Priya</span>
+                            <i class="fa fa-angle-down nav-caret"></i>
+                        </button>
+                        <div class="account-menu" role="menu">
+                            <div class="dropdown-user-header">
+                                <div class="user-greeting">Signed in as</div>
+                                <div class="user-name-full">Priya Sharma</div>
+                                <div class="user-badge"><i class="fa fa-star"></i> VIP Explorer</div>
+                            </div>
+                            <ul class="account-menu-items">
+                                <li><a href="customer-dashboard.html?tab=overview"><i class="fa fa-th-large"></i> Dashboard Overview</a></li>
+                                <li><a href="my-profile.html"><i class="fa fa-user-o"></i> My Profile</a></li>
+                                <li><a href="my-bookings.html"><i class="fa fa-suitcase"></i> My Bookings</a></li>
+                                <li><a href="my-enquiries.html"><i class="fa fa-paper-plane-o"></i> My Enquiries</a></li>
+                                <li><a href="payment-history.html"><i class="fa fa-credit-card"></i> Payment History</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a href="javascript:void(0)" id="nav-logout-action" style="color:var(--color-danger); font-weight:600;"><i class="fa fa-sign-out"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Single Prominent Plan Your Trip CTA Button -->
+                    <a href="customize-tour.html" class="btn btn-plan-trip">
+                        <span>Plan Your Trip</span>
+                    </a>
+
+                    <!-- Mobile Hamburger Toggle -->
+                    <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer & Backdrop -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="drawer-logo">
+                <img src="https://dreamtravelkar.co.in/images/logo.png" alt="Dream Travelkar" style="height:38px; width:auto;">
+            </a>
+            <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <div class="drawer-user-card" id="drawer-user-card">
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:42px; height:42px; border-radius:50%; background:var(--color-sand-light); border:1.5px solid var(--color-gold); color:var(--color-navy); display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:700;">
+                    P
+                </div>
+                <div>
+                    <div style="font-weight:700; color:var(--color-navy); font-size:0.95rem;">Priya Sharma</div>
+                    <div style="font-size:0.75rem; color:#166534;"><i class="fa fa-circle" style="font-size:0.6rem;"></i> Logged In (Customer Portal)</div>
+                </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px;">
+                <a href="customer-dashboard.html" class="btn btn-sm btn-outline-navy" style="font-size:0.78rem; padding:6px 10px;">
+                    <i class="fa fa-th-large"></i> Dashboard
+                </a>
+                <a href="my-bookings.html" class="btn btn-sm btn-outline-navy" style="font-size:0.78rem; padding:6px 10px;">
+                    <i class="fa fa-suitcase"></i> My Trips
+                </a>
+            </div>
+        </div>
+
+        <div class="drawer-nav-content">
+            <ul class="drawer-nav-menu">
+                <li><a href="index.html" class="drawer-nav-link"><i class="fa fa-home"></i> Home</a></li>
+                <li class="drawer-has-dropdown">
+                    <a href="javascript:void(0)" class="drawer-nav-link drawer-dropdown-toggle">
+                        <span><i class="fa fa-compass"></i> Destinations</span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="drawer-submenu">
+                        <li class="drawer-sub-header">Incredible India</li>
+                        <li><a href="destination-details.html?id=dest-rajasthan">Rajasthan Forts &amp; Deserts</a></li>
+                        <li><a href="destination-details.html?id=dest-kerala">Kerala Backwaters &amp; Munnar</a></li>
+                        <li><a href="destination-details.html?id=dest-himachal">Himachal Pradesh</a></li>
+                        <li><a href="destination-details.html?id=dest-andaman">Andaman Coral Islands</a></li>
+                        <li><a href="destination-details.html?id=dest-konkan">Dream Konkan (मी मावळा)</a></li>
+                        <li><a href="destination-details.html?id=dest-kashmir">Majestic Kashmir Valley</a></li>
+                        <li class="drawer-sub-header">World Holidays</li>
+                        <li><a href="destination-details.html?id=dest-thailand">Thailand</a></li>
+                        <li><a href="destination-details.html?id=dest-dubai">Dubai</a></li>
+                        <li><a href="destination-details.html?id=dest-bali">Bali</a></li>
+                        <li><a href="destination-details.html?id=dest-switzerland">Switzerland</a></li>
+                        <li><a href="destinations.html" style="font-weight:600; color:var(--color-ocean);">View All Destinations &rarr;</a></li>
+                    </ul>
+                </li>
+                <li><a href="packages.html" class="drawer-nav-link"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
+                <li><a href="customize-tour.html" class="drawer-nav-link"><i class="fa fa-sliders"></i> Customize Tour</a></li>
+                <li><a href="about.html" class="drawer-nav-link"><i class="fa fa-info-circle"></i> About Us</a></li>
+                <li><a href="reviews.html" class="drawer-nav-link"><i class="fa fa-star-o"></i> Reviews</a></li>
+                <li><a href="contact.html" class="drawer-nav-link active"><i class="fa fa-envelope-o"></i> Contact</a></li>
+            </ul>
+
+            <div class="drawer-lang-selector">
+                <span class="drawer-section-title">Language</span>
+                <div class="drawer-lang-pills">
+                    <button type="button" class="drawer-lang-btn active" data-lang="mr">मराठी (मी मावळा)</button>
+                    <button type="button" class="drawer-lang-btn" data-lang="en">English</button>
+                    <button type="button" class="drawer-lang-btn" data-lang="hi">हिन्दी</button>
+                </div>
+            </div>
+
+            <div class="drawer-cta-wrapper">
+                <a href="customize-tour.html" class="btn btn-plan-trip drawer-btn-plan">
+                    <i class="fa fa-paper-plane-o"></i> Plan Your Trip
+                </a>
+                <a href="tel:+919867807837" class="drawer-call-link">
+                    <i class="fa fa-phone"></i> +91 9867807837 (Worli, Mumbai)
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Page Banner -->
+    <div style="background:linear-gradient(rgba(13,30,42,0.7), rgba(20,43,59,0.85)), url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; padding:65px 0; color:#ffffff; text-align:center;">
+        <div class="container">
+            <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--color-gold); font-weight:700; display:block; margin-bottom:8px;">Headquartered in Mumbai &bull; Serving Travelers Worldwide</span>
+            <h1 style="color:#ffffff; font-size:2.8rem; margin-bottom:10px;">Contact Dream Travelkar</h1>
+            <p style="color:#e2e8f0; font-size:1.05rem; max-width:620px; margin:0 auto;">
+                Have a question or planning your next family holiday? Reach out to our dedicated travel advisers today.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Details & Form Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-page-layout" style="display:grid; grid-template-columns:1fr 1.3fr; gap:40px; align-items:start;">
+                
+                <!-- Contact Information Column -->
+                <div>
+                    <div style="background:#ffffff; border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:36px; box-shadow:var(--shadow-sm); margin-bottom:28px;">
+                        <h3 style="font-size:1.4rem; color:var(--color-navy); margin-bottom:24px;">Our Headquarters</h3>
+                        
+                        <div style="display:flex; gap:16px; margin-bottom:24px;">
+                            <div style="width:48px; height:48px; border-radius:var(--radius-md); background:var(--color-sand-light); display:flex; align-items:center; justify-content:center; color:var(--color-ocean); font-size:1.3rem; flex-shrink:0;">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div>
+                                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--color-gold); font-weight:700; display:block; margin-bottom:4px;">Registered Address</span>
+                                <p style="font-size:0.95rem; line-height:1.6; margin:0; color:#374151;">
+                                    <strong>BDD Block No. 46/7,</strong><br>
+                                    Dr. G.M.Bhosale Marg, Worli,<br>
+                                    Mumbai - 400018, Maharashtra, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:16px; margin-bottom:24px;">
+                            <div style="width:48px; height:48px; border-radius:var(--radius-md); background:var(--color-sand-light); display:flex; align-items:center; justify-content:center; color:var(--color-ocean); font-size:1.3rem; flex-shrink:0;">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div>
+                                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--color-gold); font-weight:700; display:block; margin-bottom:4px;">Telephone Lines</span>
+                                <p style="font-size:0.95rem; margin:0; line-height:1.6;">
+                                    Primary: <a href="tel:+919867807837" style="color:var(--color-ocean); font-weight:600;">+91 9867807837</a><br>
+                                    Support: <a href="tel:+919821871072" style="color:var(--color-ocean); font-weight:600;">+91 9821871072</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:16px; margin-bottom:24px;">
+                            <div style="width:48px; height:48px; border-radius:var(--radius-md); background:var(--color-sand-light); display:flex; align-items:center; justify-content:center; color:var(--color-ocean); font-size:1.3rem; flex-shrink:0;">
+                                <i class="fa fa-envelope-o"></i>
+                            </div>
+                            <div>
+                                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--color-gold); font-weight:700; display:block; margin-bottom:4px;">Email Inquiries</span>
+                                <p style="font-size:0.95rem; margin:0; line-height:1.6;">
+                                    General: <a href="mailto:info@dreamtravelkar.com" style="color:var(--color-ocean);">info@dreamtravelkar.com</a><br>
+                                    Sales: <a href="mailto:sales@dreamtravelkar.com" style="color:var(--color-ocean);">sales@dreamtravelkar.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:16px;">
+                            <div style="width:48px; height:48px; border-radius:var(--radius-md); background:var(--color-sand-light); display:flex; align-items:center; justify-content:center; color:var(--color-ocean); font-size:1.3rem; flex-shrink:0;">
+                                <i class="fa fa-clock-o"></i>
+                            </div>
+                            <div>
+                                <span style="font-size:0.75rem; text-transform:uppercase; color:var(--color-gold); font-weight:700; display:block; margin-bottom:4px;">Business Hours</span>
+                                <p style="font-size:0.92rem; margin:0; line-height:1.6; color:#374151;">
+                                    Monday &ndash; Saturday: 09:30 AM &ndash; 07:30 PM<br>
+                                    Sunday: By Prior Appointment
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp Connect -->
+                    <div style="background:var(--color-sand-light); border:1px solid rgba(185,154,98,0.3); border-radius:var(--radius-md); padding:24px; text-align:center;">
+                        <i class="fa fa-whatsapp" style="font-size:2.4rem; color:#25D366; margin-bottom:8px;"></i>
+                        <h4 style="font-size:1.2rem; color:var(--color-navy); margin-bottom:4px;">Instant WhatsApp Assistance</h4>
+                        <p style="font-size:0.85rem; color:#4b5563; margin-bottom:14px;">Chat with our holiday planner on +91 9867807837 for quick quotes.</p>
+                        <button type="button" class="btn btn-gold btn-sm dt-whatsapp-btn" style="width:100%;">
+                            Open WhatsApp Chat
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div style="background:#ffffff; border:1px solid var(--color-border); border-radius:var(--radius-lg); padding:36px; box-shadow:var(--shadow-sm);">
+                    <h3 style="font-size:1.4rem; color:var(--color-navy); margin-bottom:8px;">Send Us an Inquiry</h3>
+                    <p style="font-size:0.9rem; color:var(--color-muted); margin-bottom:24px;">
+                        Please provide your details below and our team will get in touch with you promptly.
+                    </p>
+
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-row-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                            <div class="form-group">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" id="contact-email" class="form-control" placeholder="name@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone (WhatsApp) *</label>
+                                <input type="tel" id="contact-phone" class="form-control" placeholder="+91 98200 XXXXX" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Destination of Interest</label>
+                            <input type="text" id="contact-destination" class="form-control" placeholder="e.g. Rajasthan, Kerala, Himachal, Thailand, Bali">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">How Can We Help You?</label>
+                            <textarea id="contact-message" class="form-control" rows="4" placeholder="Mention tentative dates, group size, or custom questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-lg" style="width:100%;">
+                            <i class="fa fa-send"></i> Submit Contact Inquiry
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none; padding:30px 0;">
+                <div data-i18n="footer_copyright">&copy; 2026 Dream Travelkar. BDD Block No. 46/7, Dr. G.M.Bhosale Marg, Worli Mumbai - 400018.</div>
+                <div class="footer-bottom-links">
+                    <a href="index.html" data-i18n="nav_home">Home</a>
+                    <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+                    <a href="packages.html" data-i18n="nav_packages">Packages</a>
+                    <a href="about.html" data-i18n="nav_about">About Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Action -->
+    <a href="#" class="dt-whatsapp-float dt-whatsapp-btn" title="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i> <span>WhatsApp Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/enquiries.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

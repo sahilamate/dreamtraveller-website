@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login | Dream Travelkar</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="https://dreamtravelkar.co.in/images/logo.png">
+</head>
+<body style="background:var(--color-sand-light); min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:30px 20px;">
+
+    <div style="max-width:440px; width:100%; background:#ffffff; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); border:1px solid var(--color-border); overflow:hidden;">
+        <!-- Header -->
+        <div style="background:var(--color-navy); padding:32px 28px; text-align:center; color:#ffffff; border-bottom:3px solid var(--color-gold);">
+            <a href="index.html">
+                <img src="https://dreamtravelkar.co.in/images/logo.png" alt="Dream Travelkar" style="height:44px; margin:0 auto 12px auto;" onerror="this.style.display='none';">
+            </a>
+            <h2 style="color:#ffffff; font-size:1.6rem; margin-bottom:4px;">Customer Portal</h2>
+            <p style="color:var(--color-sand); font-size:0.82rem; text-transform:uppercase; letter-spacing:0.1em; margin:0;">
+                Access Your Bookings, Enquiries &amp; Invoices
+            </p>
+        </div>
+
+        <!-- Body Form -->
+        <div style="padding:32px 28px;">
+            <div style="background:#fef9c3; border:1px solid #fde047; border-radius:var(--radius-sm); padding:10px 12px; font-size:0.78rem; color:#854d0e; margin-bottom:20px;">
+                <i class="fa fa-info-circle"></i> <strong>Frontend Demo Notice:</strong> Use the one-click demo login below or enter any sample customer email.
+            </div>
+
+            <!-- Quick One Click Demo Login -->
+            <button type="button" id="btn-quick-customer-login" class="btn btn-gold" style="width:100%; margin-bottom:20px; padding:12px;">
+                <i class="fa fa-bolt"></i> Quick Login as Priya Sharma (Demo)
+            </button>
+
+            <div style="display:flex; align-items:center; margin-bottom:20px;">
+                <div style="flex-grow:1; height:1px; background:var(--color-border);"></div>
+                <span style="padding:0 12px; font-size:0.75rem; text-transform:uppercase; color:var(--color-muted);">or login with email</span>
+                <div style="flex-grow:1; height:1px; background:var(--color-border);"></div>
+            </div>
+
+            <form id="customer-login-form">
+                <div class="form-group">
+                    <label class="form-label">Email Address *</label>
+                    <input type="email" id="login-email" class="form-control" value="priya@example.com" placeholder="name@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password *</label>
+                    <input type="password" id="login-password" class="form-control" value="customer123" placeholder="Enter password" required>
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; font-size:0.82rem;">
+                    <label style="display:flex; align-items:center; gap:6px; cursor:pointer;">
+                        <input type="checkbox" checked> Remember Me
+                    </label>
+                    <a href="#" style="color:var(--color-ocean);" onclick="alert('In demo mode, any password works! Click Quick Login for instant demo.'); return false;">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; padding:13px;">
+                    <i class="fa fa-sign-in"></i> Sign In to Dashboard
+                </button>
+            </form>
+
+            <div style="margin-top:24px; text-align:center; font-size:0.85rem; color:var(--color-muted); border-top:1px solid var(--color-border-light); padding-top:16px;">
+                Don't have an account? <a href="register.html" style="color:var(--color-ocean); font-weight:600;">Register Demo Account</a>
+            </div>
+
+            <div style="margin-top:12px; text-align:center; font-size:0.82rem;">
+                <a href="admin-login.html" style="color:#64748b;"><i class="fa fa-lock"></i> Are you an Administrator? Admin CRM Login</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top:20px; text-align:center; font-size:0.82rem; color:#64748b;">
+        <a href="index.html" style="color:var(--color-navy);"><i class="fa fa-arrow-left"></i> Back to Dream Travelkar Home</a>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // One-click quick login
+            const quickBtn = document.getElementById('btn-quick-customer-login');
+            if (quickBtn) {
+                quickBtn.addEventListener('click', function () {
+                    StorageManager.setCurrentUser({
+                        id: "CUST-001",
+                        name: "Priya Sharma",
+                        email: "priya@example.com",
+                        phone: "+91 98200 12345",
+                        city: "Mumbai",
+                        isDemo: true
+                    });
+                    StorageManager.showToast('Logged in as Priya Sharma!', 'success');
+                    setTimeout(() => window.location.href = 'customer-dashboard.html', 500);
+                });
+            }
+
+            // Normal form submit
+            const form = document.getElementById('customer-login-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById('login-email').value.trim();
+                    const existingCust = StorageManager.getCustomers().find(c => c.email.toLowerCase() === email.toLowerCase());
+                    
+                    const user = existingCust ? {
+                        id: existingCust.id,
+                        name: existingCust.name,
+                        email: existingCust.email,
+                        phone: existingCust.phone,
+                        city: existingCust.city || 'Mumbai'
+                    } : {
+                        id: "CUST-" + Math.floor(Math.random() * 900 + 100),
+                        name: email.split('@')[0],
+                        email: email,
+                        phone: "+91 98200 12345",
+                        city: "Mumbai"
+                    };
+
+                    StorageManager.setCurrentUser(user);
+                    StorageManager.showToast(`Welcome back, ${user.name}!`, 'success');
+                    setTimeout(() => window.location.href = 'customer-dashboard.html', 600);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

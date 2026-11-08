@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Editor &amp; Itinerary Builder | Dream Travelkar Admin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="https://dreamtravelkar.co.in/images/logo.png">
+</head>
+<body class="admin-body">
+
+    <div class="admin-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <div class="admin-brand-icon">DT</div>
+                <div>
+                    <div class="admin-brand-title">Dream Travelkar</div>
+                    <div class="admin-brand-sub">Business System</div>
+                </div>
+            </div>
+
+            <div class="admin-nav-section">
+                <div class="admin-nav-label">Main Navigation</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item">
+                        <a href="admin-dashboard.html"><i class="fa fa-dashboard"></i> Overview</a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="manage-packages.html"><i class="fa fa-suitcase"></i> Tour Packages</a>
+                    </li>
+                    <li class="admin-nav-item active">
+                        <a href="add-package.html"><i class="fa fa-plus-circle"></i> Add New Package</a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="manage-destinations.html"><i class="fa fa-map-marker"></i> Destinations</a>
+                    </li>
+                </ul>
+
+                <div class="admin-nav-label" style="margin-top:16px;">CRM &amp; Operations</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item">
+                        <a href="manage-enquiries.html"><i class="fa fa-inbox"></i> Enquiries / Leads</a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="manage-customers.html"><i class="fa fa-users"></i> Customers</a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="manage-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="manage-payments.html"><i class="fa fa-credit-card"></i> Payments</a>
+                    </li>
+                </ul>
+
+                <div class="admin-nav-label" style="margin-top:16px;">Partners &amp; Settings</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item">
+                        <a href="manage-hotels.html"><i class="fa fa-hotel"></i> Hotels</a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="manage-suppliers.html"><i class="fa fa-bus"></i> Transport Suppliers</a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="reports.html"><i class="fa fa-bar-chart"></i> Reports &amp; Analytics</a>
+                    </li>
+                    <li class="admin-nav-item">
+                        <a href="website-settings.html"><i class="fa fa-cog"></i> Website Settings</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="admin-sidebar-footer">
+                <div class="admin-user-pill">
+                    <div class="admin-avatar">AD</div>
+                    <div class="admin-user-meta">
+                        <div class="admin-user-name">Operations Lead</div>
+                        <div class="admin-user-role">Super Admin</div>
+                    </div>
+                </div>
+                <a href="#" id="admin-logout-btn" title="Logout" style="color:#ef4444; font-size:1.1rem;"><i class="fa fa-power-off"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <header class="admin-topbar">
+                <div class="admin-page-title">
+                    <h1 id="package-editor-title">Create / Edit Tour Package</h1>
+                    <p>Build comprehensive day-wise itineraries, inclusions, pricing, and hotel assignments</p>
+                </div>
+                <div class="admin-topbar-actions">
+                    <a href="manage-packages.html" class="btn btn-sm btn-outline-navy">
+                        <i class="fa fa-arrow-left"></i> Back to Inventory
+                    </a>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <form id="add-edit-package-form">
+                    <input type="hidden" id="pkg-id-hidden">
+
+                    <!-- Basic Package Information Card -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3>1. Basic Information &amp; Pricing</h3>
+                        </div>
+                        <div class="admin-card-body">
+                            <div class="form-group">
+                                <label class="form-label">Package Title *</label>
+                                <input type="text" id="pkg-title" class="form-control" placeholder="e.g. Royal Rajasthan Marwad & Mewar Circuit" required>
+                            </div>
+
+                            <div style="display:grid; grid-template-columns: 1.5fr 1fr 1fr; gap:16px;">
+                                <div class="form-group">
+                                    <label class="form-label">Destination Region *</label>
+                                    <select id="pkg-dest-select" class="form-control" required>
+                                        <!-- populated dynamically by admin.js -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Selling Price (₹ / Person) *</label>
+                                    <input type="number" id="pkg-price" class="form-control" placeholder="25000" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Original Price (₹ Strike-through)</label>
+                                    <input type="number" id="pkg-original-price" class="form-control" placeholder="28500">
+                                </div>
+                            </div>
+
+                            <div style="display:grid; grid-template-columns: 1.5fr 1fr 1fr; gap:16px;">
+                                <div class="form-group">
+                                    <label class="form-label">Duration Label *</label>
+                                    <input type="text" id="pkg-duration" class="form-control" placeholder="e.g. 9 Days / 8 Nights" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Total Days *</label>
+                                    <input type="number" id="pkg-days" class="form-control" value="9" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Total Nights *</label>
+                                    <input type="number" id="pkg-nights" class="form-control" value="8" required>
+                                </div>
+                            </div>
+
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+                                <div class="form-group">
+                                    <label class="form-label">Hotel Category</label>
+                                    <input type="text" id="pkg-hotel" class="form-control" placeholder="e.g. 4-Star Heritage Haveli & Luxury Desert Resort">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Transportation</label>
+                                    <input type="text" id="pkg-transport" class="form-control" placeholder="e.g. Private AC Innova / Luxury Coach">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Cover Image URL *</label>
+                                <input type="url" id="pkg-cover-image" class="form-control" placeholder="https://images.unsplash.com/..." required>
+                                <img id="cover-image-preview" src="" alt="Preview" style="display:none; max-width:240px; height:120px; object-fit:cover; margin-top:8px; border-radius:4px; border:1px solid #e2e8f0;">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Short Summary / Highlights *</label>
+                                <textarea id="pkg-summary" class="form-control" rows="2" placeholder="Brief 2-line summary visible on cards..." required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day-Wise Itinerary Builder Card -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <div>
+                                <h3>2. Day-wise Itinerary Builder</h3>
+                                <p style="font-size:0.8rem; color:#64748b; margin:0;">Dynamically add or remove itinerary days</p>
+                            </div>
+                            <button type="button" id="btn-add-itinerary-day" class="btn btn-sm btn-gold">
+                                <i class="fa fa-plus"></i> Add Itinerary Day
+                            </button>
+                        </div>
+                        <div class="admin-card-body">
+                            <div id="itinerary-builder-container">
+                                <!-- Populated dynamically by admin.js -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inclusions & Exclusions Card -->
+                    <div class="admin-card">
+                        <div class="admin-card-header">
+                            <h3>3. Inclusions, Exclusions &amp; Policies</h3>
+                        </div>
+                        <div class="admin-card-body">
+                            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                                <div class="form-group">
+                                    <label class="form-label">Inclusions (One item per line) *</label>
+                                    <textarea id="pkg-inclusions" class="form-control" rows="5" placeholder="8 Nights 4-Star stay&#10;Daily breakfast & dinner&#10;Private AC Vehicle"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Exclusions (One item per line) *</label>
+                                    <textarea id="pkg-exclusions" class="form-control" rows="5" placeholder="Flight / Train tickets&#10;Monument entry fees&#10;Personal laundry & tips"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Cancellation Policy *</label>
+                                <textarea id="pkg-cancellation" class="form-control" rows="2" placeholder="Full refund up to 15 days before departure..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Actions -->
+                    <div style="display:flex; justify-content:flex-end; gap:14px; margin-bottom:40px;">
+                        <a href="manage-packages.html" class="btn btn-outline-navy">Cancel</a>
+                        <button type="submit" class="btn btn-gold btn-lg">
+                            <i class="fa fa-check-circle"></i> Save Package to Inventory
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Settings | Dream Travelkar Admin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="https://dreamtravelkar.co.in/images/logo.png">
+</head>
+<body class="admin-body">
+
+    <div class="admin-layout">
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <div class="admin-brand-icon">DT</div>
+                <div><div class="admin-brand-title">Dream Travelkar</div><div class="admin-brand-sub">Business System</div></div>
+            </div>
+            <div class="admin-nav-section">
+                <div class="admin-nav-label">Main Navigation</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="admin-dashboard.html"><i class="fa fa-dashboard"></i> Overview</a></li>
+                    <li class="admin-nav-item"><a href="manage-packages.html"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
+                    <li class="admin-nav-item"><a href="add-package.html"><i class="fa fa-plus-circle"></i> Add New Package</a></li>
+                    <li class="admin-nav-item"><a href="manage-destinations.html"><i class="fa fa-map-marker"></i> Destinations</a></li>
+                </ul>
+                <div class="admin-nav-label" style="margin-top:16px;">CRM &amp; Operations</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="manage-enquiries.html"><i class="fa fa-inbox"></i> Enquiries / Leads</a></li>
+                    <li class="admin-nav-item"><a href="manage-customers.html"><i class="fa fa-users"></i> Customers</a></li>
+                    <li class="admin-nav-item"><a href="manage-bookings.html"><i class="fa fa-calendar-check-o"></i> Bookings</a></li>
+                    <li class="admin-nav-item"><a href="manage-payments.html"><i class="fa fa-credit-card"></i> Payments</a></li>
+                </ul>
+                <div class="admin-nav-label" style="margin-top:16px;">Partners &amp; Settings</div>
+                <ul class="admin-nav-list">
+                    <li class="admin-nav-item"><a href="manage-hotels.html"><i class="fa fa-hotel"></i> Hotels</a></li>
+                    <li class="admin-nav-item"><a href="manage-suppliers.html"><i class="fa fa-bus"></i> Transport Suppliers</a></li>
+                    <li class="admin-nav-item"><a href="reports.html"><i class="fa fa-bar-chart"></i> Reports &amp; Analytics</a></li>
+                    <li class="admin-nav-item active"><a href="website-settings.html"><i class="fa fa-cog"></i> Website Settings</a></li>
+                </ul>
+            </div>
+            <div class="admin-sidebar-footer">
+                <div class="admin-user-pill">
+                    <div class="admin-avatar">AD</div>
+                    <div class="admin-user-meta"><div class="admin-user-name">Operations Lead</div><div class="admin-user-role">Super Admin</div></div>
+                </div>
+                <a href="#" id="admin-logout-btn" title="Logout" style="color:#ef4444;"><i class="fa fa-power-off"></i></a>
+            </div>
+        </aside>
+
+        <main class="admin-main" id="admin-settings-view">
+            <header class="admin-topbar">
+                <div class="admin-page-title">
+                    <h1>Website &amp; Business Settings</h1>
+                    <p>Configure company details, telephone hotlines, WhatsApp numbers, and booking parameters</p>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <div class="admin-card">
+                    <div class="admin-card-header">
+                        <h3>General Business Configuration</h3>
+                        <span class="badge badge-confirmed">Auto-Persisted</span>
+                    </div>
+                    <div class="admin-card-body">
+                        <form id="website-settings-form" style="max-width:750px;">
+                            <div class="form-group">
+                                <label class="form-label">Company Brand Name *</label>
+                                <input type="text" id="set-company-name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Primary Tagline *</label>
+                                <input type="text" id="set-tagline" class="form-control" required>
+                            </div>
+
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                                <div class="form-group">
+                                    <label class="form-label">Primary Contact Number *</label>
+                                    <input type="text" id="set-phone-primary" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Secondary Support Phone</label>
+                                    <input type="text" id="set-phone-secondary" class="form-control">
+                                </div>
+                            </div>
+
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                                <div class="form-group">
+                                    <label class="form-label">WhatsApp Number (e.g. 919867807837) *</label>
+                                    <input type="text" id="set-whatsapp" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Advance Booking Token (%) *</label>
+                                    <input type="number" id="set-advance-pct" class="form-control" value="30" min="10" max="100" required>
+                                </div>
+                            </div>
+
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                                <div class="form-group">
+                                    <label class="form-label">Primary Email Address *</label>
+                                    <input type="email" id="set-email-primary" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Sales Department Email</label>
+                                    <input type="email" id="set-email-sales" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Head Office Physical Address *</label>
+                                <textarea id="set-address" class="form-control" rows="3" required></textarea>
+                            </div>
+
+                            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; padding-top:20px; border-top:1px solid #e2e8f0;">
+                                <button type="button" id="btn-reset-demo-data" class="btn btn-sm btn-outline-navy" style="color:var(--color-danger); border-color:#fca5a5;">
+                                    <i class="fa fa-refresh"></i> Reset All Demo Data to Factory
+                                </button>
+                                <button type="submit" class="btn btn-gold btn-lg">
+                                    <i class="fa fa-save"></i> Save Settings
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

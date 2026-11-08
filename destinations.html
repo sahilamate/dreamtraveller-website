@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Destinations | Dream Travelkar</title>
+    <meta name="description" content="Explore domestic and international holiday destinations with Dream Travelkar. Rajasthan, Kerala, Himachal, Andaman, Konkan, Thailand, Dubai, Bali and Switzerland.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="https://dreamtravelkar.co.in/images/logo.png">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-inner">
+                <div class="top-bar-left">
+                    <div class="top-bar-item">
+                        <i class="fa fa-phone"></i>
+                        <span>Call Us: <a href="tel:+919867807837">+91 9867807837</a> / <a href="tel:+919821871072">+91 9821871072</a></span>
+                    </div>
+                    <div class="top-bar-item hide-mobile">
+                        <i class="fa fa-envelope-o"></i>
+                        <span>info@dreamtravelkar.com</span>
+                    </div>
+                </div>
+                <div class="top-bar-right">
+                    <span class="top-bar-badge hide-mobile">•|| गडकोट गडकोट जय शिवराय ||•</span>
+                    <a href="admin-dashboard.html" class="top-bar-item">
+                        <i class="fa fa-lock"></i> <span>Admin Portal</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="site-main-header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- 1. LEFT: Company Logo -->
+                <div class="navbar-brand-section">
+                    <a href="index.html" class="logo-wrapper" title="Dream Travelkar - Premium Holidays">
+                        <img src="https://dreamtravelkar.co.in/images/logo.png" alt="Dream Travelkar Logo" class="site-logo" onerror="this.style.display='none'; document.getElementById('logo-text-box').style.display='flex';">
+                        <div id="logo-text-box" class="logo-fallback-text" style="display:none;">
+                            <span class="logo-brand-name">Dream Travelkar</span>
+                            <span class="logo-brand-tagline">Premium Holidays &amp; Tours</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 2. CENTER: Navigation Links -->
+                <nav class="navbar-nav-section" id="desktop-navbar" aria-label="Main Navigation">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        
+                        <!-- Destinations Category Dropdown -->
+                        <li class="nav-item has-dropdown active" id="nav-item-destinations">
+                            <a href="destinations.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                                Destinations <i class="fa fa-angle-down nav-caret"></i>
+                            </a>
+                            <div class="mega-dest-dropdown" role="menu">
+                                <div class="dropdown-cols-wrapper">
+                                    <div class="dropdown-col">
+                                        <div class="dropdown-header">
+                                            <i class="fa fa-map-marker"></i> Incredible India
+                                        </div>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-rajasthan">Rajasthan Forts &amp; Deserts <span class="dropdown-badge">Popular</span></a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-kerala">Kerala Backwaters &amp; Munnar <span class="dropdown-badge">Bestseller</span></a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-himachal">Himachal Pradesh (Manali/Shimla)</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-andaman">Andaman Coral Islands</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-konkan">Dream Konkan &amp; Sindhudurg</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-kashmir">Majestic Kashmir Valley</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-col">
+                                        <div class="dropdown-header">
+                                            <i class="fa fa-globe"></i> World Holidays
+                                        </div>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-thailand">Thailand (Bangkok &amp; Pattaya)</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-dubai">Dubai Desert &amp; Skylines</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-bali">Bali Tropical Paradise</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-switzerland">Switzerland Alpine Grandeur</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-singapore">Singapore &amp; Sentosa</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-vietnam">Vietnam &amp; Ha Long Bay</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-footer-bar">
+                                    <a href="destinations.html">Explore All 12+ Destinations &rarr;</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a href="packages.html" class="nav-link">Tour Packages</a></li>
+                        <li class="nav-item"><a href="customize-tour.html" class="nav-link">Customize Tour</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- 3. RIGHT: Actions (Language, Customer Account, Plan Your Trip CTA) -->
+                <div class="navbar-actions-section">
+                    <!-- Language Selector with Marathi / मी मावळा -->
+                    <div class="nav-action-item nav-lang-dropdown" id="nav-lang-dropdown">
+                        <button type="button" class="lang-trigger-btn" aria-haspopup="true" aria-expanded="false" title="Language Selector">
+                            <i class="fa fa-language"></i>
+                            <span class="current-lang-label">मी मावळा</span>
+                            <i class="fa fa-angle-down nav-caret"></i>
+                        </button>
+                        <div class="lang-menu" role="menu">
+                            <a href="javascript:void(0)" class="lang-option active" data-lang="mr">
+                                <span class="lang-name">मराठी (मी मावळा)</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="lang-option" data-lang="en">
+                                <span class="lang-name">English</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="lang-option" data-lang="hi">
+                                <span class="lang-name">हिन्दी (Hindi)</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Customer Account Dropdown (Priya) -->
+                    <div class="nav-action-item nav-account-dropdown" id="nav-account-dropdown">
+                        <button type="button" class="account-user-trigger" aria-haspopup="true" aria-expanded="false" title="Customer Account">
+                            <span class="account-avatar-icon"><i class="fa fa-user-circle"></i></span>
+                            <span class="account-name">Priya</span>
+                            <i class="fa fa-angle-down nav-caret"></i>
+                        </button>
+                        <div class="account-menu" role="menu">
+                            <div class="dropdown-user-header">
+                                <div class="user-greeting">Signed in as</div>
+                                <div class="user-name-full">Priya Sharma</div>
+                                <div class="user-badge"><i class="fa fa-star"></i> VIP Explorer</div>
+                            </div>
+                            <ul class="account-menu-items">
+                                <li><a href="customer-dashboard.html?tab=overview"><i class="fa fa-th-large"></i> Dashboard Overview</a></li>
+                                <li><a href="my-profile.html"><i class="fa fa-user-o"></i> My Profile</a></li>
+                                <li><a href="my-bookings.html"><i class="fa fa-suitcase"></i> My Bookings</a></li>
+                                <li><a href="my-enquiries.html"><i class="fa fa-paper-plane-o"></i> My Enquiries</a></li>
+                                <li><a href="payment-history.html"><i class="fa fa-credit-card"></i> Payment History</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a href="javascript:void(0)" id="nav-logout-action" style="color:var(--color-danger); font-weight:600;"><i class="fa fa-sign-out"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Single Prominent Plan Your Trip CTA Button -->
+                    <a href="customize-tour.html" class="btn btn-plan-trip">
+                        <span>Plan Your Trip</span>
+                    </a>
+
+                    <!-- Mobile Hamburger Toggle -->
+                    <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer & Backdrop -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="drawer-logo">
+                <img src="https://dreamtravelkar.co.in/images/logo.png" alt="Dream Travelkar" style="height:38px; width:auto;">
+            </a>
+            <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <div class="drawer-user-card" id="drawer-user-card">
+            <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:42px; height:42px; border-radius:50%; background:var(--color-sand-light); border:1.5px solid var(--color-gold); color:var(--color-navy); display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:700;">
+                    P
+                </div>
+                <div>
+                    <div style="font-weight:700; color:var(--color-navy); font-size:0.95rem;">Priya Sharma</div>
+                    <div style="font-size:0.75rem; color:#166534;"><i class="fa fa-circle" style="font-size:0.6rem;"></i> Logged In (Customer Portal)</div>
+                </div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px;">
+                <a href="customer-dashboard.html" class="btn btn-sm btn-outline-navy" style="font-size:0.78rem; padding:6px 10px;">
+                    <i class="fa fa-th-large"></i> Dashboard
+                </a>
+                <a href="my-bookings.html" class="btn btn-sm btn-outline-navy" style="font-size:0.78rem; padding:6px 10px;">
+                    <i class="fa fa-suitcase"></i> My Trips
+                </a>
+            </div>
+        </div>
+
+        <div class="drawer-nav-content">
+            <ul class="drawer-nav-menu">
+                <li><a href="index.html" class="drawer-nav-link"><i class="fa fa-home"></i> Home</a></li>
+                <li class="drawer-has-dropdown open">
+                    <a href="javascript:void(0)" class="drawer-nav-link drawer-dropdown-toggle active">
+                        <span><i class="fa fa-compass"></i> Destinations</span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="drawer-submenu" style="display:block;">
+                        <li class="drawer-sub-header">Incredible India</li>
+                        <li><a href="destination-details.html?id=dest-rajasthan">Rajasthan Forts &amp; Deserts</a></li>
+                        <li><a href="destination-details.html?id=dest-kerala">Kerala Backwaters &amp; Munnar</a></li>
+                        <li><a href="destination-details.html?id=dest-himachal">Himachal Pradesh</a></li>
+                        <li><a href="destination-details.html?id=dest-andaman">Andaman Coral Islands</a></li>
+                        <li><a href="destination-details.html?id=dest-konkan">Dream Konkan (मी मावळा)</a></li>
+                        <li><a href="destination-details.html?id=dest-kashmir">Majestic Kashmir Valley</a></li>
+                        <li class="drawer-sub-header">World Holidays</li>
+                        <li><a href="destination-details.html?id=dest-thailand">Thailand</a></li>
+                        <li><a href="destination-details.html?id=dest-dubai">Dubai</a></li>
+                        <li><a href="destination-details.html?id=dest-bali">Bali</a></li>
+                        <li><a href="destination-details.html?id=dest-switzerland">Switzerland</a></li>
+                        <li><a href="destinations.html" style="font-weight:600; color:var(--color-ocean);">View All Destinations &rarr;</a></li>
+                    </ul>
+                </li>
+                <li><a href="packages.html" class="drawer-nav-link"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
+                <li><a href="customize-tour.html" class="drawer-nav-link"><i class="fa fa-sliders"></i> Customize Tour</a></li>
+                <li><a href="about.html" class="drawer-nav-link"><i class="fa fa-info-circle"></i> About Us</a></li>
+                <li><a href="reviews.html" class="drawer-nav-link"><i class="fa fa-star-o"></i> Reviews</a></li>
+                <li><a href="contact.html" class="drawer-nav-link"><i class="fa fa-envelope-o"></i> Contact</a></li>
+            </ul>
+
+            <div class="drawer-lang-selector">
+                <span class="drawer-section-title">Language</span>
+                <div class="drawer-lang-pills">
+                    <button type="button" class="drawer-lang-btn active" data-lang="mr">मराठी (मी मावळा)</button>
+                    <button type="button" class="drawer-lang-btn" data-lang="en">English</button>
+                    <button type="button" class="drawer-lang-btn" data-lang="hi">हिन्दी</button>
+                </div>
+            </div>
+
+            <div class="drawer-cta-wrapper">
+                <a href="customize-tour.html" class="btn btn-plan-trip drawer-btn-plan">
+                    <i class="fa fa-paper-plane-o"></i> Plan Your Trip
+                </a>
+                <a href="tel:+919867807837" class="drawer-call-link">
+                    <i class="fa fa-phone"></i> +91 9867807837 (Worli, Mumbai)
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Page Header Banner -->
+    <div style="background:linear-gradient(rgba(13,30,42,0.75), rgba(20,43,59,0.85)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; padding:70px 0; color:#ffffff; text-align:center;">
+        <div class="container">
+            <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--color-gold); font-weight:700; display:block; margin-bottom:8px;">Curated Travel Circuits</span>
+            <h1 style="color:#ffffff; font-size:3rem; margin-bottom:12px;">Explore Handcrafted Destinations</h1>
+            <p style="color:#e2e8f0; font-size:1.1rem; max-width:650px; margin:0 auto;">
+                Discover royal forts, tranquil emerald backwaters, snow-crested mountain peaks, and world-class global escapes.
+            </p>
+        </div>
+    </div>
+
+    <!-- Filter Buttons & Destinations Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <!-- Filter Pills -->
+            <div style="display:flex; justify-content:center; gap:12px; margin-bottom:40px; flex-wrap:wrap;">
+                <button type="button" class="btn btn-primary btn-sm dest-filter-btn" data-filter="all">All Destinations (12)</button>
+                <button type="button" class="btn btn-outline-navy btn-sm dest-filter-btn" data-filter="domestic">India Domestic (6)</button>
+                <button type="button" class="btn btn-outline-navy btn-sm dest-filter-btn" data-filter="international">International Holidays (6)</button>
+            </div>
+
+            <div class="destinations-grid" id="destinations-container">
+                <!-- Rendered dynamically via JavaScript from StorageManager -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none; padding:30px 0;">
+                <div>&copy; 2026 Dream Travelkar. BDD Block No. 46/7, Dr. G.M.Bhosale Marg, Worli Mumbai - 400018.</div>
+                <div class="footer-bottom-links">
+                    <a href="index.html" data-i18n="nav_home">Home</a>
+                    <a href="packages.html" data-i18n="nav_packages">Packages</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contact</a>
+                    <a href="admin-dashboard.html">Admin</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action -->
+    <a href="#" class="dt-whatsapp-float dt-whatsapp-btn" title="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i> <span>WhatsApp Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('destinations-container');
+            const dests = StorageManager.getDestinations();
+            
+            let currentFilter = 'all';
+
+            function render(filter = 'all') {
+                currentFilter = filter;
+                const lang = (typeof I18nManager !== 'undefined') ? I18nManager.getCurrentLanguage() : 'en';
+                const filtered = dests.filter(d => filter === 'all' || d.type === filter);
+                
+                const startingFromText = (typeof I18nManager !== 'undefined') ? I18nManager.t('dest_start_from', 'Starting From') : 'Starting From';
+                const exploreText = (lang === 'mr') ? 'सविस्तर पहा' : ((lang === 'hi') ? 'विवरण देखें' : 'Explore');
+                const domesticBadge = (lang === 'mr') ? 'अतुल्य भारत' : ((lang === 'hi') ? 'अतुल्य भारत' : 'Incredible India');
+                const intlBadge = (lang === 'mr') ? 'आंतरराष्ट्रीय' : ((lang === 'hi') ? 'अंतरराष्ट्रीय' : 'International');
+
+                container.innerHTML = filtered.map(d => {
+                    const destI18n = (typeof I18nManager !== 'undefined' && I18nManager.destinations[d.id] && I18nManager.destinations[d.id][lang]) ? I18nManager.destinations[d.id][lang] : null;
+                    const name = destI18n ? destI18n.name : d.name;
+                    const tagline = destI18n ? destI18n.tagline : d.tagline;
+
+                    return `
+                    <div class="dest-card" data-type="${d.type}">
+                        <div class="dest-card-image-wrap">
+                            <img src="${d.cardImage}" alt="${name}" class="dest-card-img" loading="lazy">
+                            <span class="dest-badge" style="background:${d.type === 'domestic' ? 'var(--color-navy)' : 'var(--color-ocean)'};">
+                                ${d.type === 'domestic' ? domesticBadge : intlBadge}
+                            </span>
+                            <div class="dest-rating"><i class="fa fa-star"></i> ${d.rating} (${d.reviewCount})</div>
+                        </div>
+                        <div class="dest-card-body">
+                            <h3 class="dest-title">${name}</h3>
+                            <p class="dest-tagline">${tagline}</p>
+                            <div style="font-size:0.8rem; color:var(--color-muted); margin-bottom:12px;">
+                                <i class="fa fa-calendar-check-o" style="color:var(--color-gold);"></i> Best Season: ${d.bestSeason}
+                            </div>
+                            <div class="dest-card-footer">
+                                <div>
+                                    <span class="dest-price-label">${startingFromText}</span>
+                                    <span class="dest-price-val">₹${Number(d.startingPrice).toLocaleString('en-IN')}</span>
+                                </div>
+                                <a href="destination-details.html?id=${d.id}" class="dest-card-link">
+                                    ${exploreText} <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `}).join('');
+            }
+
+            render('all');
+
+            // Re-render when language changes
+            window.addEventListener('dtLanguageChanged', function () {
+                render(currentFilter);
+            });
+
+            // Handle filter buttons
+            const btns = document.querySelectorAll('.dest-filter-btn');
+            btns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    btns.forEach(b => {
+                        b.classList.remove('btn-primary');
+                        b.classList.add('btn-outline-navy');
+                    });
+                    btn.classList.add('btn-primary');
+                    btn.classList.remove('btn-outline-navy');
+                    render(btn.getAttribute('data-filter'));
+                });
+            });
+        });
+    </script>
+</body>
+</html>

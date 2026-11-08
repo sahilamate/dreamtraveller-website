@@ -1,0 +1,484 @@
+/**
+ * Dream Travelkar - Responsive Stylesheet
+ * Fluid layouts, mobile navigation drawer, and complete multi-device adaptations.
+ */
+
+/* Universal Zero-Overflow Guards */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 1. Laptops & Compact Desktops (under 1180px) */
+@media (max-width: 1180px) {
+    .nav-menu {
+        gap: 14px;
+    }
+    .nav-link {
+        font-size: 0.88rem;
+    }
+    .navbar-actions-section {
+        gap: 10px;
+    }
+    .btn-plan-trip {
+        padding: 9px 16px;
+        font-size: 0.88rem;
+    }
+    .lang-trigger-btn,
+    .account-user-trigger {
+        padding: 7px 10px;
+        font-size: 0.82rem;
+    }
+}
+
+/* 2. Tablets and below (992px and below) - Switch to Mobile Drawer Navigation */
+@media (max-width: 992px) {
+    /* Hide desktop top-bar extra items */
+    .top-bar-left span.hide-mobile,
+    .top-bar-item.hide-mobile,
+    .top-bar-badge {
+        display: none !important;
+    }
+
+    .top-bar-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .top-bar-left, .top-bar-right {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* Hide desktop center nav */
+    .navbar-nav-section {
+        display: none !important;
+    }
+
+    /* Show hamburger menu toggle */
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    .header-inner {
+        height: 72px;
+    }
+
+    .site-logo {
+        height: 42px;
+    }
+
+    /* Hide desktop CTA button in header (available in mobile drawer) */
+    .btn-plan-trip {
+        display: none !important;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-search-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-search-form .btn-search-submit {
+        grid-column: span 2;
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .custom-tour-banner {
+        grid-template-columns: 1fr;
+        padding: 36px 24px;
+        gap: 30px;
+    }
+
+    .features-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+    }
+
+    .filter-bar-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .filter-bar-form .btn-filter-submit {
+        grid-column: span 2;
+    }
+
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .admin-sidebar {
+        width: 100% !important;
+        position: relative !important;
+        height: auto !important;
+    }
+
+    .customer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* Multi-column Detail and Form Layouts stack on Tablet */
+    .details-two-col-layout,
+    .package-details-layout,
+    .customize-builder-layout,
+    .contact-page-layout,
+    .about-hero-grid,
+    .about-office-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .about-hero-grid img {
+        height: 340px !important;
+    }
+}
+
+/* 3. Mobile Phones & Phablets (768px and below) */
+@media (max-width: 768px) {
+    /* Completely hide top-bar on mobile to eliminate horizontal scrolling & content pushing */
+    .top-bar {
+        display: none !important;
+    }
+
+    .header-inner {
+        height: 68px;
+    }
+
+    .site-logo {
+        height: 40px;
+    }
+
+    .section-padding {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 36px 0 54px 0;
+    }
+
+    .hero-title {
+        font-size: 1.95rem;
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    .hero-description {
+        font-size: 0.98rem;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+
+    /* Centered Stacked Hero CTA Group without overlapping floats */
+    .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 30px auto;
+        gap: 12px;
+    }
+
+    .hero-cta-group .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 12px 18px;
+        font-size: 0.95rem;
+    }
+
+    .hero-pill-badge {
+        font-size: 0.72rem;
+        padding: 5px 12px;
+        margin-bottom: 16px;
+    }
+
+    /* Banner Controls on Mobile */
+    .hero-banner-controls {
+        bottom: 20px;
+        gap: 12px;
+    }
+
+    .hero-banner-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+
+    .hero-slide-dot {
+        width: 22px;
+        height: 5px;
+    }
+
+    .hero-slide-dot.active {
+        width: 36px;
+    }
+
+    .hero-search-box {
+        padding: 20px 16px;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-search-form {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+
+    .hero-search-form .btn-search-submit {
+        grid-column: span 1;
+        width: 100%;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sub-grid and Form column stacking on mobile */
+    .form-row-2col,
+    .form-row-3col,
+    .details-highlights-grid,
+    .package-features-grid,
+    .package-inclusions-grid,
+    .cust-quick-links-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    /* Destination Package Row Card Stacking */
+    .dest-package-row-card {
+        grid-template-columns: 1fr !important;
+        text-align: left !important;
+        gap: 16px !important;
+    }
+
+    .dest-package-row-card > div:last-child {
+        text-align: left !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid var(--color-border-light);
+        padding-top: 12px;
+    }
+
+    .dest-package-row-card img {
+        height: 180px !important;
+        width: 100% !important;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .filter-bar-form {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar-form .btn-filter-submit {
+        grid-column: span 1;
+    }
+
+    .customer-dashboard-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .customer-kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Navbar Right Actions on small mobile */
+    .nav-lang-dropdown {
+        display: none !important; /* Fully accessible inside mobile drawer */
+    }
+
+    .account-user-trigger .account-name {
+        display: none;
+    }
+
+    .account-user-trigger {
+        padding: 6px 8px;
+    }
+
+    /* Floating Action Buttons: Sleek, non-obstructive 48px circles */
+    .dt-whatsapp-float {
+        bottom: 18px;
+        left: 16px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+        z-index: 990;
+    }
+
+    .dt-whatsapp-float span {
+        display: none !important;
+    }
+
+    .dt-whatsapp-float i {
+        font-size: 1.45rem;
+        margin: 0;
+    }
+
+    .dt-chatbot-launcher {
+        bottom: 18px;
+        right: 16px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        z-index: 990;
+    }
+
+    .dt-chatbot-window {
+        right: 12px;
+        left: 12px;
+        bottom: 78px;
+        width: calc(100vw - 24px);
+        max-width: 420px;
+        height: 72vh;
+    }
+}
+
+/* 4. Small Mobiles (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .header-inner {
+        height: 64px;
+    }
+
+    .site-logo {
+        height: 36px;
+    }
+
+    .logo-brand-name {
+        font-size: 1.1rem;
+    }
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-search-box {
+        padding: 16px 12px;
+    }
+
+    .customer-kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dt-modal-content {
+        padding: 0;
+        max-width: 95vw;
+        border-radius: var(--radius-md);
+    }
+
+    .dt-modal-header,
+    .dt-modal-body,
+    .dt-modal-footer {
+        padding: 14px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-nav-drawer {
+        width: 290px;
+        max-width: 82vw;
+    }
+
+    .account-menu {
+        right: -8px;
+        min-width: 210px;
+        max-width: calc(100vw - 24px);
+    }
+}
+
+/* 5. Extra Small Mobiles (360px and below) */
+@media (max-width: 360px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hero-title {
+        font-size: 1.55rem;
+    }
+
+    .mobile-nav-drawer {
+        width: 260px;
+        max-width: 84vw;
+    }
+}
+
+/* Responsive Table Wrapper Helper */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+    border-radius: var(--radius-sm);
+}
+
+.table-responsive table {
+    min-width: 580px;
+    width: 100%;
+}
