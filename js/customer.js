@@ -16,14 +16,11 @@ function initCustomerPortal() {
 
     let user = StorageManager.getCurrentUser();
     if (!user) {
-        user = {
-            id: "CUST-001",
-            name: "Priya Sharma",
-            email: "priya@example.com",
-            phone: "+91 98200 12345",
-            city: "Mumbai"
-        };
-        StorageManager.setCurrentUser(user);
+        StorageManager.showToast('Please sign in or register to access your travel dashboard.', 'info');
+        setTimeout(() => {
+            window.location.href = 'login.html?redirect=customer-dashboard.html';
+        }, 400);
+        return;
     }
 
     // Set User Profile UI Elements

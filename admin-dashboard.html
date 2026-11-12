@@ -167,7 +167,7 @@
                 </div>
 
                 <!-- Charts Row -->
-                <div style="display:grid; grid-template-columns: 2fr 1fr; gap:24px; margin-bottom:30px;">
+                <div class="admin-charts-grid">
                     <div class="admin-card" style="margin-bottom:0;">
                         <div class="admin-card-header">
                             <h3>Monthly Tour Revenue (2026 Trend)</h3>
@@ -189,14 +189,17 @@
                     </div>
                 </div>
 
-                <!-- Two-Column Operations Tables -->
-                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+                <!-- Operations Tables (Full-Width Clean Cards) -->
+                <div style="display:flex; flex-direction:column; gap:28px;">
                     
                     <!-- Recent Bookings Table -->
                     <div class="admin-card" style="margin-bottom:0;">
                         <div class="admin-card-header">
-                            <h3>Recent Holiday Bookings</h3>
-                            <a href="manage-bookings.html" style="font-size:0.82rem; color:var(--color-ocean); font-weight:600;">View All &rarr;</a>
+                            <div>
+                                <h3>Recent Holiday Bookings</h3>
+                                <p style="font-size:0.8rem; color:#64748b; margin:2px 0 0 0;">Recent guest reservations across domestic and international circuits</p>
+                            </div>
+                            <a href="manage-bookings.html" class="btn btn-sm btn-outline-navy"><i class="fa fa-list"></i> View All Bookings &rarr;</a>
                         </div>
                         <div class="table-responsive">
                             <table class="admin-table">
@@ -221,8 +224,11 @@
                     <!-- Recent Enquiries Table -->
                     <div class="admin-card" style="margin-bottom:0;">
                         <div class="admin-card-header">
-                            <h3>Latest Enquiries &amp; Leads</h3>
-                            <a href="manage-enquiries.html" style="font-size:0.82rem; color:var(--color-ocean); font-weight:600;">Manage Leads &rarr;</a>
+                            <div>
+                                <h3>Latest Enquiries &amp; Leads</h3>
+                                <p style="font-size:0.8rem; color:#64748b; margin:2px 0 0 0;">Inbound customer enquiries received from website &amp; WhatsApp</p>
+                            </div>
+                            <a href="manage-enquiries.html" class="btn btn-sm btn-outline-navy"><i class="fa fa-inbox"></i> Manage All Leads &rarr;</a>
                         </div>
                         <div class="table-responsive">
                             <table class="admin-table">
@@ -230,7 +236,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Prospect</th>
-                                        <th>Destination</th>
+                                        <th>Target Destination</th>
                                         <th>Date</th>
                                         <th>Status</th>
                                         <th>Update</th>
@@ -254,5 +260,6 @@
     <script src="js/storage.js"></script>
     <script src="js/bookings.js"></script>
     <script src="js/admin.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>

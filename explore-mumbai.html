@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Mumbai – Discover the City of Dreams | Dream Travelkar</title>
+    <meta name="description" content="Experience Mumbai with Dream Travelkar. Private guided heritage tours, Elephanta Caves, street food safaris, Bollywood tours, and luxury chauffeur services for international tourists and NRIs.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/png" href="https://dreamtravelkar.co.in/images/logo.png">
+
+    <style>
+        /* Explore Mumbai Specific Luxury Styling */
+        .mum-hero {
+            position: relative;
+            min-height: 520px;
+            background: linear-gradient(135deg, rgba(20, 43, 59, 0.92) 0%, rgba(36, 107, 131, 0.82) 100%),
+                        url('https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: #FAF9F6;
+            padding: 80px 0;
+        }
+        .mum-hero-content {
+            max-width: 820px;
+        }
+        .mum-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(185, 154, 98, 0.25);
+            border: 1px solid rgba(185, 154, 98, 0.6);
+            color: #E8D9C3;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .mum-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.9rem;
+            line-height: 1.2;
+            color: #FAF9F6;
+            margin-bottom: 18px;
+        }
+        .mum-hero p {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #E8D9C3;
+            margin-bottom: 28px;
+        }
+        .mum-currency-bar {
+            background: rgba(20, 43, 59, 0.7);
+            border: 1px solid rgba(185, 154, 98, 0.4);
+            border-radius: 12px;
+            padding: 14px 20px;
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+            backdrop-filter: blur(8px);
+        }
+        .currency-toggle-group {
+            display: inline-flex;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 3px;
+        }
+        .currency-btn {
+            background: transparent;
+            border: none;
+            color: #FAF9F6;
+            padding: 6px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .currency-btn.active {
+            background: var(--color-gold);
+            color: #142B3B;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        .currency-note {
+            font-size: 0.8rem;
+            color: #E8D9C3;
+            font-style: italic;
+        }
+        
+        /* Attractions Grid */
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 36px;
+        }
+        .attraction-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(20, 43, 59, 0.08);
+            border: 1px solid rgba(20, 43, 59, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .attraction-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(20, 43, 59, 0.14);
+        }
+        .attraction-img-wrap {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+        .attraction-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .attraction-card:hover .attraction-img-wrap img {
+            transform: scale(1.06);
+        }
+        .attraction-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(20, 43, 59, 0.88);
+            color: var(--color-gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .attraction-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .attraction-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--color-navy);
+            margin-bottom: 10px;
+        }
+        .attraction-body p {
+            font-size: 0.92rem;
+            color: var(--color-charcoal);
+            line-height: 1.55;
+            margin-bottom: 14px;
+            flex-grow: 1;
+        }
+        .attraction-meta {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+            border-top: 1px solid rgba(20, 43, 59, 0.08);
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Mumbai Packages */
+        .mum-pkg-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            margin-top: 36px;
+        }
+        .mum-pkg-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(20, 43, 59, 0.1);
+            box-shadow: 0 8px 24px rgba(20, 43, 59, 0.08);
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mum-pkg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 30px rgba(20, 43, 59, 0.14);
+        }
+        .mum-pkg-card.mum-pkg-card-wide {
+            grid-column: span 2;
+        }
+        .mum-pkg-header {
+            position: relative;
+            height: 200px;
+        }
+        .mum-pkg-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .mum-pkg-pill {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: var(--color-gold);
+            color: #142B3B;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+        .mum-pkg-body {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .mum-pkg-duration {
+            font-size: 0.82rem;
+            color: var(--color-ocean);
+            font-weight: 600;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .mum-pkg-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.35rem;
+            color: var(--color-navy);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .mum-pkg-summary {
+            font-size: 0.92rem;
+            color: var(--color-charcoal);
+            line-height: 1.5;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+        .mum-pkg-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .mum-pkg-features li {
+            font-size: 0.85rem;
+            color: var(--color-charcoal);
+            padding: 4px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mum-pkg-features li i {
+            color: var(--color-ocean);
+        }
+        .mum-pkg-footer {
+            border-top: 1px solid rgba(20, 43, 59, 0.08);
+            padding-top: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .mum-pkg-price-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .mum-pkg-price-label {
+            font-size: 0.75rem;
+            color: var(--color-muted);
+            text-transform: uppercase;
+        }
+        .mum-pkg-price-val {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+        .mum-pkg-price-orig {
+            font-size: 0.82rem;
+            color: var(--color-muted);
+            text-decoration: line-through;
+        }
+
+        /* Additional Services */
+        .services-strip {
+            background: var(--color-ivory);
+            border: 1px solid rgba(20, 43, 59, 0.08);
+            border-radius: 16px;
+            padding: 36px 30px;
+            margin-top: 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .service-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .service-icon-box {
+            width: 46px;
+            height: 46px;
+            border-radius: 10px;
+            background: var(--color-navy);
+            color: var(--color-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        .service-item h4 {
+            font-size: 1rem;
+            color: var(--color-navy);
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .service-item p {
+            font-size: 0.85rem;
+            color: var(--color-charcoal);
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        /* Enquiry Form Card */
+        .enquiry-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 12px 36px rgba(20, 43, 59, 0.12);
+            border: 1px solid rgba(185, 154, 98, 0.3);
+            overflow: hidden;
+            margin-top: 40px;
+        }
+        .enquiry-card-header {
+            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-ocean) 100%);
+            color: #FAF9F6;
+            padding: 32px;
+            border-bottom: 3px solid var(--color-gold);
+        }
+        .enquiry-card-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: #FAF9F6;
+        }
+        .enquiry-card-header p {
+            color: #E8D9C3;
+            font-size: 1rem;
+            margin: 0;
+        }
+        .enquiry-card-body {
+            padding: 36px;
+        }
+        .enquiry-form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .enquiry-form-grid .full-span {
+            grid-column: span 2;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--color-navy);
+            margin-bottom: 6px;
+        }
+        .form-group label span.req {
+            color: #d9534f;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #dcdcdc;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            color: var(--color-navy);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-ocean);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(36, 107, 131, 0.15);
+        }
+        .checkbox-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 6px;
+        }
+        .checkbox-pill-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--color-ivory);
+            border: 1px solid rgba(20, 43, 59, 0.15);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+        }
+        .checkbox-pill-label input {
+            width: auto;
+            margin: 0;
+        }
+        .checkbox-pill-label:has(input:checked) {
+            background: rgba(36, 107, 131, 0.15);
+            border-color: var(--color-ocean);
+            color: var(--color-ocean);
+            font-weight: 600;
+        }
+
+        /* Success Confirmation Modal / Banner */
+        .mum-success-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(20, 43, 59, 0.7);
+            z-index: 99999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .mum-success-box {
+            background: #fff;
+            max-width: 540px;
+            width: 100%;
+            border-radius: 16px;
+            padding: 36px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border-top: 6px solid var(--color-gold);
+            animation: modalFadeIn 0.3s ease;
+        }
+        @keyframes modalFadeIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .mum-success-icon {
+            width: 70px;
+            height: 70px;
+            background: #E8F5E9;
+            color: #2E7D32;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+        }
+        .enquiry-id-badge {
+            display: inline-block;
+            background: var(--color-ivory);
+            border: 1px dashed var(--color-gold);
+            color: var(--color-navy);
+            font-family: monospace;
+            font-size: 1.15rem;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 8px;
+            margin: 14px 0 20px 0;
+        }
+
+        /* Testimonials Section */
+        .foreign-reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .review-card-intl {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid rgba(20, 43, 59, 0.08);
+            box-shadow: 0 4px 16px rgba(20, 43, 59, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        .review-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .review-author-info h4 {
+            font-size: 1rem;
+            color: var(--color-navy);
+            margin: 0;
+            font-weight: 700;
+        }
+        .review-country {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .review-stars {
+            color: #f39c12;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+        .review-card-intl p {
+            font-size: 0.92rem;
+            color: var(--color-charcoal);
+            line-height: 1.5;
+            font-style: italic;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        /* Practical Info Guide */
+        .practical-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .practical-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid rgba(20, 43, 59, 0.08);
+            box-shadow: 0 4px 12px rgba(20, 43, 59, 0.04);
+        }
+        .practical-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--color-navy);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .practical-card h4 i {
+            color: var(--color-gold);
+        }
+        .practical-card p {
+            font-size: 0.9rem;
+            color: var(--color-charcoal);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .mum-pkg-wide-perks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 14px;
+            margin: 16px 0 24px 0;
+        }
+
+        /* Complete Mobile & Tablet Responsiveness for Explore Mumbai */
+        @media (max-width: 1024px) {
+            .mum-pkg-grid {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+            .mum-pkg-card.mum-pkg-card-wide,
+            .mum-pkg-card[style*="grid-column"] {
+                grid-column: span 1 !important;
+                width: 100% !important;
+            }
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .foreign-reviews-grid,
+            .practical-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mum-hero {
+                padding: 50px 0;
+                min-height: auto;
+            }
+            .mum-hero h1 {
+                font-size: clamp(1.8rem, 5vw, 2.3rem);
+            }
+            .mum-hero p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+            .mum-currency-bar {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 12px 14px;
+            }
+            .attractions-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .mum-pkg-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            .mum-pkg-card,
+            .mum-pkg-card.mum-pkg-card-wide,
+            .mum-pkg-card[style*="grid-column"] {
+                grid-column: span 1 !important;
+                width: 100% !important;
+            }
+            .enquiry-card-body {
+                padding: 24px 16px;
+            }
+            .enquiry-form-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+            }
+            .enquiry-form-grid .full-span {
+                grid-column: span 1 !important;
+            }
+            .foreign-reviews-grid,
+            .practical-info-grid,
+            .services-grid {
+                grid-template-columns: 1fr !important;
+                gap: 18px !important;
+            }
+            .mum-pkg-wide-perks {
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .mum-pkg-footer {
+                flex-direction: column !important;
+                align-items: stretch !important;
+                gap: 14px !important;
+            }
+            .mum-pkg-footer .btn {
+                width: 100% !important;
+                text-align: center !important;
+                justify-content: center !important;
+            }
+            .mum-pkg-body {
+                padding: 20px 16px;
+            }
+            .services-strip {
+                padding: 24px 16px;
+            }
+        }
+
+        /* Luxury Footer Grid Styles (Desktop, Tablet, Mobile) */
+        .main-footer .footer-top,
+        .main-footer .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1.1fr 1.1fr 1.6fr;
+            gap: 40px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .main-footer .footer-brand img {
+            height: 48px;
+            width: auto;
+            margin-bottom: 14px;
+        }
+        .main-footer .footer-brand h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+        .main-footer .footer-tagline {
+            color: var(--color-sand);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 18px;
+        }
+        .main-footer .footer-desc {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            color: #cbd5e1;
+        }
+        .main-footer .footer-col h4 {
+            color: #ffffff;
+            font-size: 1.15rem;
+            margin-bottom: 22px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .main-footer .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 36px;
+            height: 2px;
+            background: var(--color-gold);
+        }
+        .main-footer .footer-links-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .main-footer .footer-links-list li {
+            margin-bottom: 10px;
+        }
+        .main-footer .footer-links-list a {
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        .main-footer .footer-links-list a:hover {
+            color: var(--color-sand);
+            padding-left: 5px;
+        }
+        .main-footer .footer-contact-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+        .main-footer .footer-contact-item i {
+            color: var(--color-gold);
+            margin-top: 4px;
+        }
+        .main-footer .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+        .main-footer .footer-social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+        .main-footer .footer-social-btn:hover {
+            background: var(--color-gold);
+            color: var(--color-navy);
+        }
+        @media (max-width: 991px) {
+            .main-footer .footer-top,
+            .main-footer .footer-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 32px !important;
+            }
+        }
+        @media (max-width: 640px) {
+            .main-footer .footer-top,
+            .main-footer .footer-grid {
+                grid-template-columns: 1fr !important;
+                gap: 28px !important;
+            }
+            .main-footer .footer-bottom {
+                flex-direction: column !important;
+                gap: 14px !important;
+                text-align: center !important;
+            }
+            .main-footer .footer-bottom-links {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 12px 16px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="site-main-header">
+        <div class="container">
+            <div class="header-inner">
+                <!-- 1. LEFT: Company Logo -->
+                <div class="navbar-brand-section">
+                    <a href="index.html" class="logo-wrapper" title="Dream Travelkar - Premium Holidays">
+                        <img src="https://dreamtravelkar.co.in/images/logo.png" alt="Dream Travelkar Logo" class="site-logo" onerror="this.style.display='none'; document.getElementById('logo-text-box').style.display='flex';">
+                        <div id="logo-text-box" class="logo-fallback-text" style="display:none;">
+                            <span class="logo-brand-name">Dream Travelkar</span>
+                            <span class="logo-brand-tagline">Premium Holidays &amp; Tours</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 2. CENTER: Navigation Links -->
+                <nav class="navbar-nav-section" id="desktop-navbar" aria-label="Main Navigation">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                        
+                        <!-- Destinations Category Dropdown -->
+                        <li class="nav-item has-dropdown" id="nav-item-destinations">
+                            <a href="destinations.html" class="nav-link" aria-haspopup="true" aria-expanded="false">
+                                Destinations <i class="fa fa-angle-down nav-caret"></i>
+                            </a>
+                            <div class="mega-dest-dropdown" role="menu">
+                                <div class="dropdown-cols-wrapper">
+                                    <div class="dropdown-col">
+                                        <div class="dropdown-header">
+                                            <i class="fa fa-map-marker"></i> Incredible India
+                                        </div>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-rajasthan">Rajasthan Forts &amp; Deserts <span class="dropdown-badge">Popular</span></a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-kerala">Kerala Backwaters &amp; Munnar <span class="dropdown-badge">Bestseller</span></a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-himachal">Himachal Pradesh (Manali/Shimla)</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-andaman">Andaman Coral Islands</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-konkan">Dream Konkan &amp; Sindhudurg</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-kashmir">Majestic Kashmir Valley</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-goa">Goa Sun &amp; Portuguese Heritage</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-uttarakhand">Uttarakhand &amp; Ganges Serenade</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown-col">
+                                        <div class="dropdown-header">
+                                            <i class="fa fa-globe"></i> World Holidays
+                                        </div>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-thailand">Thailand (Bangkok &amp; Pattaya)</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-dubai">Dubai Desert &amp; Skylines</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-bali">Bali Tropical Paradise</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-switzerland">Switzerland Alpine Grandeur</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-singapore">Singapore &amp; Sentosa</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-vietnam">Vietnam &amp; Ha Long Bay</a></li>
+                                            <li class="dropdown-item"><a href="destination-details.html?id=dest-maldives">Maldives Luxury Atolls</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-footer-bar">
+                                    <div class="dropdown-footer-actions">
+                                        <a href="packages.html"><i class="fa fa-suitcase"></i> Tour Packages</a>
+                                        <a href="customize-tour.html"><i class="fa fa-sliders"></i> Customize Tour</a>
+                                    </div>
+                                    <a href="destinations.html" class="dest-view-all">Explore All 15+ Destinations &rarr;</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a href="about.html" class="nav-link" data-i18n="nav_about">About Us</a></li>
+                        <li class="nav-item"><a href="reviews.html" class="nav-link" data-i18n="nav_reviews">Reviews</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- 3. RIGHT: Actions (Language, Customer Account, Plan Your Trip CTA) -->
+                <div class="navbar-actions-section">
+                    <!-- Language Selector with English / Marathi -->
+                    <div class="nav-action-item nav-lang-dropdown" id="nav-lang-dropdown">
+                        <button type="button" class="lang-trigger-btn" aria-haspopup="true" aria-expanded="false" title="Language Selector">
+                            <i class="fa fa-language"></i>
+                            <span class="current-lang-label">English</span>
+                            <i class="fa fa-angle-down nav-caret"></i>
+                        </button>
+                        <div class="lang-menu" role="menu">
+                            <a href="javascript:void(0)" class="lang-option active" data-lang="en">
+                                <span class="lang-name">English</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="lang-option" data-lang="mr">
+                                <span class="lang-name">मराठी</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                            <a href="javascript:void(0)" class="lang-option" data-lang="hi">
+                                <span class="lang-name">हिन्दी (Hindi)</span>
+                                <i class="fa fa-check lang-check"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Customer Account Dropdown (Priya) -->
+                    <div class="nav-action-item nav-account-dropdown" id="nav-account-dropdown">
+                        <button type="button" class="account-user-trigger" aria-haspopup="true" aria-expanded="false" title="Customer Account">
+                            <span class="account-avatar-icon"><i class="fa fa-user-circle"></i></span>
+                            <span class="account-name">Priya</span>
+                            <i class="fa fa-angle-down nav-caret"></i>
+                        </button>
+                        <div class="account-menu" role="menu">
+                            <div class="dropdown-user-header">
+                                <div class="user-greeting">Signed in as</div>
+                                <div class="user-name-full">Priya Sharma</div>
+                                <div class="user-badge"><i class="fa fa-star"></i> VIP Explorer</div>
+                            </div>
+                            <ul class="account-menu-items">
+                                <li><a href="customer-dashboard.html?tab=overview"><i class="fa fa-th-large"></i> Dashboard Overview</a></li>
+                                <li><a href="my-profile.html"><i class="fa fa-user-o"></i> My Profile</a></li>
+                                <li><a href="my-bookings.html"><i class="fa fa-suitcase"></i> My Bookings</a></li>
+                                <li><a href="my-enquiries.html"><i class="fa fa-paper-plane-o"></i> My Enquiries</a></li>
+                                <li><a href="payment-history.html"><i class="fa fa-credit-card"></i> Payment History</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a href="javascript:void(0)" id="nav-logout-action" style="color:var(--color-danger); font-weight:600;"><i class="fa fa-sign-out"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Single Prominent Plan Your Trip CTA Button -->
+                    <a href="customize-tour.html" class="btn btn-plan-trip">
+                        <span>Plan Your Trip</span>
+                    </a>
+
+                    <!-- Mobile Hamburger Toggle -->
+                    <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer & Backdrop -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <aside class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="drawer-logo">
+                <img src="https://dreamtravelkar.co.in/images/logo.png" alt="Dream Travelkar" style="height:38px; width:auto;">
+            </a>
+            <button type="button" class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Navigation">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        <div class="drawer-nav-content">
+            <ul class="drawer-nav-menu">
+                <li><a href="index.html" class="drawer-nav-link"><i class="fa fa-home"></i> Home</a></li>
+                <li class="drawer-has-dropdown">
+                    <a href="javascript:void(0)" class="drawer-nav-link drawer-dropdown-toggle">
+                        <span><i class="fa fa-compass"></i> Destinations</span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="drawer-submenu">
+                        <li class="drawer-sub-header">Incredible India</li>
+                        <li><a href="destination-details.html?id=dest-rajasthan">Rajasthan Forts &amp; Deserts</a></li>
+                        <li><a href="destination-details.html?id=dest-kerala">Kerala Backwaters &amp; Munnar</a></li>
+                        <li><a href="destination-details.html?id=dest-himachal">Himachal Pradesh</a></li>
+                        <li><a href="destination-details.html?id=dest-andaman">Andaman Coral Islands</a></li>
+                        <li><a href="destination-details.html?id=dest-konkan">Dream Konkan &amp; Sindhudurg</a></li>
+                        <li><a href="destination-details.html?id=dest-kashmir">Majestic Kashmir Valley</a></li>
+                        <li class="drawer-sub-header">World Holidays</li>
+                        <li><a href="destination-details.html?id=dest-thailand">Thailand</a></li>
+                        <li><a href="destination-details.html?id=dest-dubai">Dubai</a></li>
+                        <li><a href="destination-details.html?id=dest-bali">Bali</a></li>
+                        <li><a href="destination-details.html?id=dest-switzerland">Switzerland</a></li>
+                        <li><a href="packages.html" style="font-weight:600; color:var(--color-navy);"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
+                        <li><a href="customize-tour.html" style="font-weight:600; color:var(--color-navy);"><i class="fa fa-sliders"></i> Customize Tour</a></li>
+                        <li><a href="destinations.html" style="font-weight:600; color:var(--color-ocean);">View All Destinations &rarr;</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" class="drawer-nav-link"><i class="fa fa-info-circle"></i> About Us</a></li>
+                <li><a href="reviews.html" class="drawer-nav-link"><i class="fa fa-star-o"></i> Reviews</a></li>
+                <li><a href="contact.html" class="drawer-nav-link"><i class="fa fa-envelope-o"></i> Contact</a></li>
+            </ul>
+
+            <div class="drawer-lang-selector">
+                <span class="drawer-section-title">Language</span>
+                <div class="drawer-lang-pills">
+                    <button type="button" class="drawer-lang-btn" data-lang="mr">मराठी</button>
+                    <button type="button" class="drawer-lang-btn active" data-lang="en">English</button>
+                    <button type="button" class="drawer-lang-btn" data-lang="hi">हिन्दी</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Hero Section -->
+    <section class="mum-hero">
+        <div class="container">
+            <div class="mum-hero-content">
+                <div class="mum-badge">
+                    <i class="fa fa-building-o"></i> Dream Travelkar Headquarters • Worli, Mumbai
+                </div>
+                <h1>Explore Mumbai – Discover the City of Dreams</h1>
+                <p>
+                    Welcome to India's financial capital, fashion epicenter, and cultural crucible. Specially curated by Dream Travelkar's local Mumbai specialists for international tourists, NRIs, and global travelers seeking comfort, authentic insights, and unforgettable memories.
+                </p>
+
+                <!-- Dual Currency Switcher -->
+                <div class="mum-currency-bar">
+                    <span style="font-weight:600; font-size:0.92rem;"><i class="fa fa-money"></i> View Prices In:</span>
+                    <div class="currency-toggle-group">
+                        <button class="currency-btn active" id="btn-curr-inr" onclick="setCurrency('INR')">INR (₹)</button>
+                        <button class="currency-btn" id="btn-curr-usd" onclick="setCurrency('USD')">USD ($)</button>
+                    </div>
+                    <span class="currency-note">USD prices are approximate conversions (1 USD ≈ ₹86). Final billing in INR.</span>
+                </div>
+
+                <div style="margin-top: 28px; display:flex; gap:14px; flex-wrap:wrap;">
+                    <a href="#mumbai-packages" class="btn btn-gold btn-lg"><i class="fa fa-eye"></i> View Mumbai Packages</a>
+                    <a href="#mumbai-enquiry" class="btn btn-outline-white btn-lg"><i class="fa fa-paper-plane"></i> Overseas Guest Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Mumbai Attractions Section -->
+    <section class="section-padding bg-ivory" id="attractions">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Sightseeing &amp; Heritage Highlights</span>
+                <h2 class="section-title">11 Key Mumbai Attractions</h2>
+                <p class="section-desc">
+                    From Victorian Gothic UNESCO monuments and sacred sea shrines to the electric energy of street food markets and Bollywood studios.
+                </p>
+            </div>
+
+            <div class="attractions-grid">
+                <!-- 1. Gateway of India -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=700&q=80" alt="Gateway of India" loading="lazy">
+                        <span class="attraction-badge">Historic Icon</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Gateway of India</h3>
+                        <p>Erected in 1924 to commemorate King George V's visit, this majestic 26-metre Indo-Saracenic basalt arch looks across the Arabian Sea and serves as Mumbai's defining postcard landmark.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Apollo Bunder, Colaba</span>
+                            <span>Open 24 Hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. The Taj Mahal Palace Hotel -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=700&q=80" alt="Taj Mahal Palace Hotel" loading="lazy">
+                        <span class="attraction-badge">Grand Heritage</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>The Taj Mahal Palace Hotel</h3>
+                        <p>Opened in 1903 by Jamsetji Tata, this opulent waterfront landmark has welcomed royalty, heads of state, and legends. Marvel at its Moorish, Oriental, and Florentine architectural facade.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Colaba Waterfront</span>
+                            <span>Heritage Exterior Tour</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Marine Drive ('Queen's Necklace') -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=700&q=80" alt="Marine Drive" loading="lazy">
+                        <span class="attraction-badge">Scenic Promenade</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Marine Drive ("Queen's Necklace")</h3>
+                        <p>A breathtaking 3.6-kilometre arc of Art Deco architecture hugging Back Bay. At night, its streetlamps glitter like pearls on a necklace, offering sea breezes and quintessential sunset views.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Nariman Point to Chowpatty</span>
+                            <span>Evening Sunset Walk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Chhatrapati Shivaji Maharaj Terminus (CSMT) -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=700&q=80" alt="CSMT Terminus" loading="lazy">
+                        <span class="attraction-badge">UNESCO World Heritage</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Chhatrapati Shivaji Maharaj Terminus (CSMT)</h3>
+                        <p>An awe-inspiring fusion of Victorian High Gothic Revival and traditional Indian Mughal architecture designed by F. W. Stevens. Illuminated in magnificent tricolours each evening.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Fort Precinct</span>
+                            <span>UNESCO Site (2004)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Dhobi Ghat -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=700&q=80" alt="Dhobi Ghat" loading="lazy">
+                        <span class="attraction-badge">Guinness Record</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Dhobi Ghat (Mahalaxmi)</h3>
+                        <p>The world's largest open-air human-powered laundromat. Hundreds of washermen (dhobis) wash, flog, dry, and iron thousands of garments each day with surgical coordination.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Mahalaxmi Station Bridge</span>
+                            <span>Viewing Deck Photo-Op</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Dharavi Ethical Tour -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=700&q=80" alt="Dharavi Tour" loading="lazy">
+                        <span class="attraction-badge">Ethical &amp; Respectful</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Dharavi Community &amp; Enterprise Tour</h3>
+                        <p>An uplifting, respectful guided walking tour demonstrating Dharavi's multi-million-dollar recycling economy, traditional Kumbharwada pottery, leather crafts, and community spirit.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Central Mumbai</span>
+                            <span>Community-Approved Guides</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Shree Siddhivinayak Temple -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=700&q=80" alt="Siddhivinayak Temple" loading="lazy">
+                        <span class="attraction-badge">Sacred Shrine</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Shree Siddhivinayak Temple</h3>
+                        <p>Dedicated to Lord Ganesha, this 200-year-old sanctuary is revered by millions of devotees, business leaders, and Bollywood icons. Special VIP darshan arrangements available for guests.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Prabhadevi (Near Worli)</span>
+                            <span>VIP Darshan Assistance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Haji Ali Dargah -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=700&q=80" alt="Haji Ali Dargah" loading="lazy">
+                        <span class="attraction-badge">Sea Sanctuary</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Haji Ali Dargah</h3>
+                        <p>Perched on an islet 500 meters into the Arabian Sea, this 1431 Indo-Islamic tomb is accessible via a scenic causeway during low tide, serenaded by mystical Sufi Qawwali devotional music.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Worli Bay Coast</span>
+                            <span>Tidal Causeway Walk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Elephanta Caves -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=700&q=80" alt="Elephanta Caves" loading="lazy">
+                        <span class="attraction-badge">UNESCO World Heritage</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Elephanta Caves (Gharapuri Island)</h3>
+                        <p>A 1-hour scenic ferry voyage across Mumbai Harbour lands you at 6th-century rock-cut basalt cave temples featuring the colossal 7-metre three-headed Shiva sculpture (Sadashiva Trimurti).</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Mumbai Harbour Island</span>
+                            <span>Ferry &amp; Toy Train Tour</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Mumbai Street Food & Cultural Safari -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=700&q=80" alt="Mumbai Street Food" loading="lazy">
+                        <span class="attraction-badge">Culinary Trail</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Mumbai Street Food &amp; Cultural Safari</h3>
+                        <p>Savor Mumbai's culinary soul safely with our hygiene-vetted food trail. Indulge in piping hot Vada Pav, Pav Bhaji, Sev Puri, authentic Irani Bun Maska Chai, and aromatic spices at Crawford Market.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Crawford Market &amp; Khau Galli</span>
+                            <span>Food Safety Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Bollywood Studio Tour -->
+                <div class="attraction-card">
+                    <div class="attraction-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=700&q=80" alt="Bollywood Studio" loading="lazy">
+                        <span class="attraction-badge">Cinema World</span>
+                    </div>
+                    <div class="attraction-body">
+                        <h3>Bollywood Studio &amp; Film City Tour</h3>
+                        <p>Immerse yourself in the world's largest film-producing industry. Drive through Mumbai's sprawling Film City in Goregaon, explore live television and cinema sets, sound stages, and costume galleries.</p>
+                        <div class="attraction-meta">
+                            <span><i class="fa fa-map-marker"></i> Film City Goregaon</span>
+                            <span>Live Sets &amp; VFX Demo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mumbai Tour Packages Section -->
+    <section class="section-padding bg-white" id="mumbai-packages">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Private &amp; Guided Sightseeing</span>
+                <h2 class="section-title">Mumbai Tour Packages for Global Guests</h2>
+                <p class="section-desc">
+                    Choose from half-day highlights, full-day heritage immersions, multi-day comprehensive circuits, or a fully bespoke private chauffeur experience.
+                </p>
+            </div>
+
+            <div class="mum-pkg-grid">
+                <!-- Package 1: Half-Day -->
+                <div class="mum-pkg-card">
+                    <div class="mum-pkg-header">
+                        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=700&q=80" alt="Half Day Mumbai">
+                        <span class="mum-pkg-pill">Express Sightseeing</span>
+                    </div>
+                    <div class="mum-pkg-body">
+                        <div class="mum-pkg-duration"><i class="fa fa-clock-o"></i> 4 to 5 Hours • Morning / Afternoon</div>
+                        <h3 class="mum-pkg-title">Half-Day Mumbai City Highlights Tour</h3>
+                        <p class="mum-pkg-summary">Tailored for busy executives, airport transit layovers, and first-time travelers wanting to witness Mumbai's most celebrated landmarks in comfort.</p>
+                        <ul class="mum-pkg-features">
+                            <li><i class="fa fa-check-circle"></i> Gateway of India &amp; Taj Mahal Palace exterior</li>
+                            <li><i class="fa fa-check-circle"></i> Scenic drive along Marine Drive ("Queen's Necklace")</li>
+                            <li><i class="fa fa-check-circle"></i> CSMT Railway Terminus architectural walk</li>
+                            <li><i class="fa fa-check-circle"></i> Private AC sedan with English-speaking chauffeur &amp; guide</li>
+                        </ul>
+                        <div class="mum-pkg-footer">
+                            <div class="mum-pkg-price-box">
+                                <span class="mum-pkg-price-label">Price per person</span>
+                                <div>
+                                    <span class="mum-pkg-price-val curr-price" data-inr="3500" data-usd="42">₹3,500</span>
+                                    <span class="mum-pkg-price-orig curr-orig" data-inr="4200" data-usd="49">₹4,200</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" onclick="prefillBooking('Half-Day Mumbai City Highlights Tour')">Inquire / Book</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2: Full-Day -->
+                <div class="mum-pkg-card">
+                    <div class="mum-pkg-header">
+                        <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=700&q=80" alt="Full Day Mumbai">
+                        <span class="mum-pkg-pill">Most Popular</span>
+                    </div>
+                    <div class="mum-pkg-body">
+                        <div class="mum-pkg-duration"><i class="fa fa-clock-o"></i> 8 to 9 Hours • Full Day</div>
+                        <h3 class="mum-pkg-title">Full-Day Mumbai Heritage &amp; Cultural Tour</h3>
+                        <p class="mum-pkg-summary">An in-depth day tour exploring colonial architecture, religious diversity, authentic open-air laundry, and traditional dining.</p>
+                        <ul class="mum-pkg-features">
+                            <li><i class="fa fa-check-circle"></i> Gateway of India, Taj Hotel, CSMT &amp; Flora Fountain</li>
+                            <li><i class="fa fa-check-circle"></i> Dhobi Ghat, Haji Ali Dargah &amp; Siddhivinayak Temple</li>
+                            <li><i class="fa fa-check-circle"></i> Crawford Market spice trail &amp; authentic thali lunch</li>
+                            <li><i class="fa fa-check-circle"></i> Dedicated licensed government tourist guide</li>
+                        </ul>
+                        <div class="mum-pkg-footer">
+                            <div class="mum-pkg-price-box">
+                                <span class="mum-pkg-price-label">Price per person</span>
+                                <div>
+                                    <span class="mum-pkg-price-val curr-price" data-inr="6500" data-usd="78">₹6,500</span>
+                                    <span class="mum-pkg-price-orig curr-orig" data-inr="7800" data-usd="92">₹7,800</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" onclick="prefillBooking('Full-Day Mumbai Heritage & Cultural Tour')">Inquire / Book</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3: 2D / 1N -->
+                <div class="mum-pkg-card">
+                    <div class="mum-pkg-header">
+                        <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=700&q=80" alt="2D1N Mumbai">
+                        <span class="mum-pkg-pill">Overnight Package</span>
+                    </div>
+                    <div class="mum-pkg-body">
+                        <div class="mum-pkg-duration"><i class="fa fa-calendar"></i> 2 Days / 1 Night • Complete Immersion</div>
+                        <h3 class="mum-pkg-title">2 Days / 1 Night Mumbai Complete Experience</h3>
+                        <p class="mum-pkg-summary">Experience both colonial South Mumbai and the trendy suburbs of Bandra, including ethical community tours and sunset over the Sea Link.</p>
+                        <ul class="mum-pkg-features">
+                            <li><i class="fa fa-check-circle"></i> 1 Night stay in 4-Star South Mumbai / BKC hotel with breakfast</li>
+                            <li><i class="fa fa-check-circle"></i> South Mumbai heritage circuit &amp; Kala Ghoda art precinct</li>
+                            <li><i class="fa fa-check-circle"></i> Dharavi ethical enterprise walk &amp; Bandra Portuguese village</li>
+                            <li><i class="fa fa-check-circle"></i> 2 Days dedicated private AC vehicle &amp; airport transfers</li>
+                        </ul>
+                        <div class="mum-pkg-footer">
+                            <div class="mum-pkg-price-box">
+                                <span class="mum-pkg-price-label">Price per person</span>
+                                <div>
+                                    <span class="mum-pkg-price-val curr-price" data-inr="14500" data-usd="170">₹14,500</span>
+                                    <span class="mum-pkg-price-orig curr-orig" data-inr="17500" data-usd="205">₹17,500</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" onclick="prefillBooking('2 Days / 1 Night Mumbai Complete Experience')">Inquire / Book</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 4: 3D / 2N -->
+                <div class="mum-pkg-card">
+                    <div class="mum-pkg-header">
+                        <img src="https://images.unsplash.com/photo-1595658658481-d53d3f999875?auto=format&fit=crop&w=700&q=80" alt="3D2N Mumbai">
+                        <span class="mum-pkg-pill">UNESCO &amp; Luxury</span>
+                    </div>
+                    <div class="mum-pkg-body">
+                        <div class="mum-pkg-duration"><i class="fa fa-calendar"></i> 3 Days / 2 Nights • Comprehensive</div>
+                        <h3 class="mum-pkg-title">3 Days / 2 Nights Mumbai &amp; Elephanta Discovery</h3>
+                        <p class="mum-pkg-summary">The ultimate international tourist itinerary featuring private sea boat cruise to Elephanta Island caves, Bollywood studios, and luxury hospitality.</p>
+                        <ul class="mum-pkg-features">
+                            <li><i class="fa fa-check-circle"></i> 2 Nights 5-Star Waterfront Hotel stay with breakfast buffet</li>
+                            <li><i class="fa fa-check-circle"></i> Return catamaran cruise to UNESCO Elephanta Caves</li>
+                            <li><i class="fa fa-check-circle"></i> Bollywood Studio VIP walk &amp; street food safari</li>
+                            <li><i class="fa fa-check-circle"></i> 24/7 dedicated Dream Travelkar Worli concierge support</li>
+                        </ul>
+                        <div class="mum-pkg-footer">
+                            <div class="mum-pkg-price-box">
+                                <span class="mum-pkg-price-label">Price per person</span>
+                                <div>
+                                    <span class="mum-pkg-price-val curr-price" data-inr="22500" data-usd="265">₹22,500</span>
+                                    <span class="mum-pkg-price-orig curr-orig" data-inr="26000" data-usd="305">₹26,000</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" onclick="prefillBooking('3 Days / 2 Nights Mumbai & Elephanta Discovery')">Inquire / Book</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 5: Customized Private Tour -->
+                <div class="mum-pkg-card mum-pkg-card-wide">
+                    <div class="mum-pkg-body" style="padding: clamp(20px, 4vw, 36px);">
+                        <div class="mum-pkg-duration"><i class="fa fa-star"></i> Bespoke Tailor-Made VIP Service</div>
+                        <h3 class="mum-pkg-title" style="font-size: clamp(1.3rem, 3vw, 1.6rem);">Customized Private Tour for International Guests &amp; NRIs</h3>
+                        <p class="mum-pkg-summary">
+                            Design your own personalized Mumbai itinerary at your own pace. Whether your focus is colonial Jewish heritage, antique spice bazaars, fine-dining gastronomy, architectural photography, or visiting family roots, our Worli operations team will handle every nuance with impeccable discretion.
+                        </p>
+                        <div class="mum-pkg-wide-perks">
+                            <div style="font-size:0.9rem; color:var(--color-navy);"><i class="fa fa-check-circle text-gold"></i> Multilingual guides (German, French, Spanish, Japanese)</div>
+                            <div style="font-size:0.9rem; color:var(--color-navy);"><i class="fa fa-check-circle text-gold"></i> Luxury fleet: Mercedes-Benz, BMW, Toyota Crysta</div>
+                            <div style="font-size:0.9rem; color:var(--color-navy);"><i class="fa fa-check-circle text-gold"></i> Flexible departure times &amp; customized route stops</div>
+                            <div style="font-size:0.9rem; color:var(--color-navy);"><i class="fa fa-check-circle text-gold"></i> Direct airport meet-and-greet with name placard</div>
+                        </div>
+                        <div class="mum-pkg-footer">
+                            <div class="mum-pkg-price-box">
+                                <span class="mum-pkg-price-label">Custom Full-Day Chauffeur &amp; Guide Package</span>
+                                <div>
+                                    <span class="mum-pkg-price-val curr-price" data-inr="18000" data-usd="210">₹18,000</span>
+                                    <span class="mum-pkg-price-orig curr-orig" data-inr="21000" data-usd="245">₹21,000</span>
+                                    <span style="font-size:0.85rem; color:var(--color-muted); margin-left:6px;">(Includes luxury car, chauffeur &amp; expert guide)</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-gold btn-lg" onclick="prefillBooking('Customized Private Tour for International Guests')"><i class="fa fa-sliders"></i> Request Custom Itinerary</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Services Strip -->
+            <div class="services-strip">
+                <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+                    <span class="section-subtitle" style="color:var(--color-ocean);">Seamless Travel Concierge</span>
+                    <h3 style="font-family:'Playfair Display',serif; color:var(--color-navy); font-size:1.6rem; margin-top:4px;">Additional Dedicated Mumbai Services</h3>
+                </div>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon-box"><i class="fa fa-plane"></i></div>
+                        <div>
+                            <h4>Airport Meet &amp; Greet</h4>
+                            <p>Seamless arrivals at CSMIA Terminal 2 with luggage assistance and sanitized luxury transfers.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon-box"><i class="fa fa-car"></i></div>
+                        <div>
+                            <h4>AC Vehicles with Chauffeur</h4>
+                            <p>Comfortable sedans, spacious SUVs, and luxury coaches driven by verified, English-speaking chauffeurs.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon-box"><i class="fa fa-language"></i></div>
+                        <div>
+                            <h4>Multilingual Guides</h4>
+                            <p>Government-licensed guides fluent in English, French, German, Spanish, Japanese, Marathi, and Hindi.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon-box"><i class="fa fa-hotel"></i></div>
+                        <div>
+                            <h4>Hotel Booking Assistance</h4>
+                            <p>Preferential corporate rates at premier luxury properties in South Mumbai (Colaba, Marine Drive) and BKC.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon-box"><i class="fa fa-cutlery"></i></div>
+                        <div>
+                            <h4>Hygiene-Certified Food Trails</h4>
+                            <p>Handpicked dining recommendations adhering to international hygiene standards for peace of mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special International Customer Enquiry Form Section -->
+    <section class="section-padding bg-ivory" id="mumbai-enquiry">
+        <div class="container">
+            <div class="enquiry-card">
+                <div class="enquiry-card-header">
+                    <span style="background:rgba(255,255,255,0.15); padding:4px 12px; border-radius:50px; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; font-weight:700;">Direct Worli Headquarters Concierge</span>
+                    <h2>International Guest &amp; NRI Travel Inquiry</h2>
+                    <p>Planning your journey to Mumbai or extending onward to Rajasthan, Kerala, Goa, or the Himalayas? Submit your requirements below and receive a detailed, transparent proposal within 12 hours.</p>
+                </div>
+                <div class="enquiry-card-body">
+                    <form id="intl-enquiry-form" onsubmit="handleIntlEnquirySubmit(event)">
+                        <div class="enquiry-form-grid">
+                            
+                            <!-- Honorific & Name -->
+                            <div class="form-group">
+                                <label for="guest-name">Full Name <span class="req">*</span></label>
+                                <input type="text" id="guest-name" name="guestName" placeholder="e.g. Dr. Johnathan Smith" required>
+                            </div>
+
+                            <!-- Country of Origin -->
+                            <div class="form-group">
+                                <label for="guest-country">Country of Residence / Origin <span class="req">*</span></label>
+                                <input type="text" id="guest-country" name="guestCountry" placeholder="e.g. United Kingdom, USA, Germany, Japan" required>
+                            </div>
+
+                            <!-- Nationality -->
+                            <div class="form-group">
+                                <label for="guest-nationality">Nationality <span class="req">*</span></label>
+                                <input type="text" id="guest-nationality" name="guestNationality" placeholder="e.g. British, American, German, NRI" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="guest-email">Email Address <span class="req">*</span></label>
+                                <input type="email" id="guest-email" name="guestEmail" placeholder="e.g. johnathan.smith@example.com" required>
+                            </div>
+
+                            <!-- Phone / WhatsApp -->
+                            <div class="form-group">
+                                <label for="guest-phone">WhatsApp / Contact Number (with Country Code) <span class="req">*</span></label>
+                                <input type="tel" id="guest-phone" name="guestPhone" placeholder="e.g. +44 7911 123456" required>
+                            </div>
+
+                            <!-- Passport (Optional) -->
+                            <div class="form-group">
+                                <label for="guest-passport">Passport Number <span style="font-weight:400; color:var(--color-muted); font-size:0.8rem;">(Optional - for hotel registration &amp; Elephanta permits)</span></label>
+                                <input type="text" id="guest-passport" name="guestPassport" placeholder="e.g. GB98234176">
+                            </div>
+
+                            <!-- Selected Tour Package -->
+                            <div class="form-group">
+                                <label for="guest-package">Selected Tour Package <span class="req">*</span></label>
+                                <select id="guest-package" name="guestPackage" required>
+                                    <option value="Half-Day Mumbai City Highlights Tour">Half-Day Mumbai City Highlights Tour (4-5 hrs)</option>
+                                    <option value="Full-Day Mumbai Heritage & Cultural Tour" selected>Full-Day Mumbai Heritage &amp; Cultural Tour (8-9 hrs)</option>
+                                    <option value="2 Days / 1 Night Mumbai Complete Experience">2 Days / 1 Night Mumbai Complete Experience</option>
+                                    <option value="3 Days / 2 Nights Mumbai & Elephanta Discovery">3 Days / 2 Nights Mumbai &amp; Elephanta Discovery</option>
+                                    <option value="Customized Private Tour for International Guests">Customized Private Tour for International Guests</option>
+                                    <option value="Mumbai + Golden Triangle (Delhi/Agra/Jaipur)">Combined: Mumbai + Golden Triangle Heritage</option>
+                                    <option value="Mumbai + Goa / Kerala Extension">Combined: Mumbai + Kerala / Goa Coastal Extension</option>
+                                </select>
+                            </div>
+
+                            <!-- Flight Arrival Details -->
+                            <div class="form-group">
+                                <label for="guest-flight">Flight Arrival Details (Date, Flight Number, Time)</label>
+                                <input type="text" id="guest-flight" name="guestFlight" placeholder="e.g. 15 Dec 2026, BA 199 from London LHR at 11:20 AM">
+                            </div>
+
+                            <!-- Hotel Preference -->
+                            <div class="form-group">
+                                <label for="guest-hotel">Hotel Preference</label>
+                                <select id="guest-hotel" name="guestHotel">
+                                    <option value="South Mumbai / Colaba / Marine Drive">South Mumbai (Colaba, Marine Drive, Nariman Point)</option>
+                                    <option value="Bandra-Kurla Complex (BKC)">Bandra-Kurla Complex (BKC - Business District)</option>
+                                    <option value="Mumbai Airport Area (Sahar/Andheri)">Near International Airport (CSMIA)</option>
+                                    <option value="I have already arranged my hotel">I have already arranged my own accommodation</option>
+                                    <option value="Need Dream Travelkar 5-Star Recommendation">Please recommend 5-Star Heritage Hotel</option>
+                                </select>
+                            </div>
+
+                            <!-- Guide Language Preference -->
+                            <div class="form-group">
+                                <label for="guest-lang">Guide Language Preference</label>
+                                <select id="guest-lang" name="guestLang">
+                                    <option value="English" selected>English (Fluent Government Licensed)</option>
+                                    <option value="German">German (Deutsch)</option>
+                                    <option value="French">French (Français)</option>
+                                    <option value="Spanish">Spanish (Español)</option>
+                                    <option value="Japanese">Japanese (日本語)</option>
+                                    <option value="Marathi">Marathi (मराठी)</option>
+                                    <option value="Hindi">Hindi (हिन्दी)</option>
+                                </select>
+                            </div>
+
+                            <!-- Dietary Requirements -->
+                            <div class="form-group">
+                                <label for="guest-diet">Dietary Requirements</label>
+                                <select id="guest-diet" name="guestDiet">
+                                    <option value="No Restrictions">No Special Restrictions</option>
+                                    <option value="Vegetarian">Strict Vegetarian</option>
+                                    <option value="Vegan">Vegan (Plant-Based)</option>
+                                    <option value="Jain (No Root Veg)">Jain (No onion, garlic, or root vegetables)</option>
+                                    <option value="Halal">Halal Certified</option>
+                                    <option value="Gluten-Free">Gluten-Free / Celiac</option>
+                                </select>
+                            </div>
+
+                            <!-- Number of Guests -->
+                            <div class="form-group">
+                                <label for="guest-count">Travel Party Size <span class="req">*</span></label>
+                                <div style="display:flex; gap:10px;">
+                                    <input type="number" id="guest-adults" name="adults" min="1" max="50" value="2" placeholder="Adults" required style="width:50%;">
+                                    <input type="number" id="guest-children" name="children" min="0" max="20" value="0" placeholder="Children (under 12)" style="width:50%;">
+                                </div>
+                            </div>
+
+                            <!-- Special Interests (Multi-select) -->
+                            <div class="form-group full-span">
+                                <label>Special Interests &amp; Themes (Select all that apply)</label>
+                                <div class="checkbox-pills">
+                                    <label class="checkbox-pill-label"><input type="checkbox" name="interests" value="Architecture & Colonial History" checked> Victorian Architecture &amp; Colonial History</label>
+                                    <label class="checkbox-pill-label"><input type="checkbox" name="interests" value="Street Food & Spice Markets"> Street Food Safaris &amp; Spice Bazaars</label>
+                                    <label class="checkbox-pill-label"><input type="checkbox" name="interests" value="Photography & Art Galleries"> Photography &amp; Art Precincts</label>
+                                    <label class="checkbox-pill-label"><input type="checkbox" name="interests" value="Bollywood & Cinema"> Bollywood &amp; Indian Cinema</label>
+                                    <label class="checkbox-pill-label"><input type="checkbox" name="interests" value="Local Handicrafts & Shopping"> Textiles, Handicrafts &amp; Antiques</label>
+                                    <label class="checkbox-pill-label"><input type="checkbox" name="interests" value="Spiritual Temples & Shrines"> Sacred Temples, Dargahs &amp; Synagogues</label>
+                                    <label class="checkbox-pill-label"><input type="checkbox" name="interests" value="Jewish Heritage in Mumbai"> Historic Jewish Heritage &amp; Sassoon Library</label>
+                                </div>
+                            </div>
+
+                            <!-- Additional Notes / Requests -->
+                            <div class="form-group full-span">
+                                <label for="guest-notes">Additional Requests, Medical Considerations or Tailored Stops</label>
+                                <textarea id="guest-notes" name="guestNotes" rows="4" placeholder="Let us know if you require wheelchair accessibility, infant car seats, specific monument visits, or onward domestic train/flight bookings."></textarea>
+                            </div>
+
+                        </div>
+
+                        <div style="margin-top:28px; text-align:center;">
+                            <button type="submit" class="btn btn-primary btn-lg" style="min-width:280px;">
+                                <i class="fa fa-send"></i> Submit International Travel Request
+                            </button>
+                            <p style="font-size:0.8rem; color:var(--color-muted); margin-top:10px;">
+                                <i class="fa fa-lock"></i> Your privacy is strictly protected. No payment required at this stage. Instant unique reference generated.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials from Foreign Travelers & NRIs -->
+    <section class="section-padding bg-white" id="testimonials">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Overseas Traveler Experiences</span>
+                <h2 class="section-title">What International Guests Say About Dream Travelkar</h2>
+                <p class="section-desc">
+                    Verified feedback from foreign travelers, NRI families, and corporate visitors who experienced Mumbai with us.
+                </p>
+            </div>
+
+            <div class="foreign-reviews-grid">
+                <!-- Review 1: UK -->
+                <div class="review-card-intl">
+                    <div class="review-card-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Mark Jenkins" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4>Mark &amp; Sarah Jenkins</h4>
+                            <span class="review-country">🇬🇧 London, United Kingdom</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>
+                        "Our 3-day Mumbai tour with Dream Travelkar was exceptional. Our guide Pradeep was encyclopedic on Mumbai's colonial architecture, the private car was spotless and cool, and the Elephanta Caves boat trip was completely effortless. We felt safe, respected, and thoroughly enchanted."
+                    </p>
+                </div>
+
+                <!-- Review 2: Germany -->
+                <div class="review-card-intl">
+                    <div class="review-card-header">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Elena Rostova" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4>Elena Rostova</h4>
+                            <span class="review-country">🇩🇪 Munich, Germany</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>
+                        "As a solo female traveler visiting India for the first time, I was nervous. Dream Travelkar's Worli team arranged an airport pickup and a wonderful German-speaking guide. The Dharavi ethical tour and the street food trail at Crawford Market were the highlights of my entire journey!"
+                    </p>
+                </div>
+
+                <!-- Review 3: Japan -->
+                <div class="review-card-intl">
+                    <div class="review-card-header">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Kenji Takahashi" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4>Kenji Takahashi</h4>
+                            <span class="review-country">🇯🇵 Tokyo, Japan</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>
+                        "Incredible attention to punctuality and hospitality. The private chauffeur navigated Mumbai's bustling traffic with zen calm. Getting to see the Dabbawalas at Churchgate and Dhobi Ghat in person was deeply fascinating. Highly recommend Dream Travelkar to all international guests."
+                    </p>
+                </div>
+
+                <!-- Review 4: USA -->
+                <div class="review-card-intl">
+                    <div class="review-card-header">
+                        <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=120&q=80" alt="David Miller" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4>David Miller &amp; Family</h4>
+                            <span class="review-country">🇺🇸 San Francisco, California</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p>
+                        "We booked the 2 Days / 1 Night complete Mumbai package before traveling onward to Udaipur. The transition from the airport to our hotel was flawless. The sunset drive across the Bandra-Worli Sea Link was stunning. Dream Travelkar sets the gold standard for Indian hospitality."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Information for Overseas Visitors -->
+    <section class="section-padding bg-ivory" id="practical-info">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Essential Travel Advice</span>
+                <h2 class="section-title">Practical Information for Overseas Visitors</h2>
+                <p class="section-desc">
+                    Helpful tips to make your Mumbai trip smooth, respectful, and safe.
+                </p>
+            </div>
+
+            <div class="practical-info-grid">
+                <div class="practical-card">
+                    <h4><i class="fa fa-sun-o"></i> Best Time to Visit</h4>
+                    <p><strong>November to February</strong> is optimal with pleasant, dry weather and balmy evenings (20°C to 30°C / 68°F to 86°F). The monsoon season (June to September) offers dramatic coastal beauty but heavy rainfall.</p>
+                </div>
+
+                <div class="practical-card">
+                    <h4><i class="fa fa-user-circle"></i> Dress Code &amp; Etiquette</h4>
+                    <p>Lightweight cottons or linens are ideal year-round. When visiting religious shrines (Siddhivinayak, Haji Ali, or temples), please dress modestly with shoulders and knees covered, and remove footwear at temple entrances.</p>
+                </div>
+
+                <div class="practical-card">
+                    <h4><i class="fa fa-credit-card"></i> Currency &amp; Payments</h4>
+                    <p>The local currency is the Indian Rupee (INR ₹). International Visa and Mastercard are accepted at all hotels, malls, and restaurants. We recommend carrying small cash denominations (₹100, ₹200, ₹500) for local markets and tips.</p>
+                </div>
+
+                <div class="practical-card">
+                    <h4><i class="fa fa-signal"></i> Connectivity &amp; SIM Cards</h4>
+                    <p>High-speed 5G is widely available. Overseas guests can easily acquire a prepaid tourist SIM (Airtel or Jio) at CSMIA Airport Terminal 2 arrival hall with their passport, visa, and passport photo.</p>
+                </div>
+
+                <div class="practical-card">
+                    <h4><i class="fa fa-tint"></i> Water &amp; Food Safety</h4>
+                    <p>Drink only sealed, bottled mineral water (Kinley, Aquafina, Himalayan). Our guided food trails visit only hygiene-certified, high-turnover culinary institutions so you can savor local delights safely.</p>
+                </div>
+
+                <div class="practical-card">
+                    <h4><i class="fa fa-ambulance"></i> Safety &amp; Emergency Helplines</h4>
+                    <p>Mumbai is widely regarded as one of India's safest metropolitan cities for international tourists. National Emergency: <strong>112</strong> | Tourist Police: <strong>100</strong>. Dream Travelkar 24/7 Worli Desk: <strong>+91 9867807837</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="https://dreamtravelkar.co.in/images/logo.png" alt="Dream Travelkar" style="height:48px; width:auto; margin-bottom:14px;" onerror="this.style.display='none';">
+                    <h3>Dream Travelkar</h3>
+                    <div class="footer-tagline">Discover Mumbai &amp; The World</div>
+                    <p class="footer-desc">
+                        Dream Travelkar is a premier travel management company based in Worli, Mumbai, offering curated domestic and international holidays, heritage circuits, and bespoke inbound travel experiences for overseas visitors.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://m.facebook.com/DreamTravelkar" target="_blank" class="footer-social-btn" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/dreamtravelkar" target="_blank" class="footer-social-btn" title="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://wa.me/919867807837" target="_blank" class="footer-social-btn" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Mumbai Sightseeing</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#attractions"><i class="fa fa-angle-right"></i> Gateway of India &amp; Colaba</a></li>
+                        <li><a href="#attractions"><i class="fa fa-angle-right"></i> Elephanta Caves UNESCO Cruise</a></li>
+                        <li><a href="#attractions"><i class="fa fa-angle-right"></i> Marine Drive &amp; Queen's Necklace</a></li>
+                        <li><a href="#attractions"><i class="fa fa-angle-right"></i> Dhobi Ghat &amp; Dharavi Walk</a></li>
+                        <li><a href="#attractions"><i class="fa fa-angle-right"></i> Bollywood &amp; Film City Tour</a></li>
+                        <li><a href="#mumbai-packages"><i class="fa fa-angle-right"></i> Custom Private Chauffeur</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Top Destinations</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="destination-details.html?id=dest-rajasthan"><i class="fa fa-angle-right"></i> Royal Rajasthan</a></li>
+                        <li><a href="destination-details.html?id=dest-kerala"><i class="fa fa-angle-right"></i> Kerala Backwaters</a></li>
+                        <li><a href="destination-details.html?id=dest-goa"><i class="fa fa-angle-right"></i> Goa Beach Retreats</a></li>
+                        <li><a href="destination-details.html?id=dest-dubai"><i class="fa fa-angle-right"></i> Dubai &amp; Abu Dhabi</a></li>
+                        <li><a href="destination-details.html?id=dest-maldives"><i class="fa fa-angle-right"></i> Maldives Luxury Atolls</a></li>
+                        <li><a href="destination-details.html?id=dest-switzerland"><i class="fa fa-angle-right"></i> Swiss Alps Explorer</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Worli Headquarters</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-map-marker"></i>
+                        <span>BDD Block No. 46/7, Dr. G.M.Bhosale Marg, Worli, Mumbai - 400018, Maharashtra, India</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-phone"></i>
+                        <span><a href="tel:+919867807837" style="color:inherit;">+91 9867807837</a> / <a href="tel:+919821871072" style="color:inherit;">+91 9821871072</a></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-envelope-o"></i>
+                        <span><a href="mailto:info@dreamtravelkar.com" style="color:inherit;">info@dreamtravelkar.com</a></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa fa-clock-o"></i>
+                        <span>Mon – Sat: 09:30 AM – 07:30 PM (IST)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Dream Travelkar. All rights reserved. BDD Block No. 46/7, Dr. G.M.Bhosale Marg, Worli, Mumbai - 400018.</div>
+                <div class="footer-bottom-links">
+                    <a href="index.html">Home</a>
+                    <a href="destinations.html">Destinations</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="explore-mumbai.html">Explore Mumbai</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="admin-dashboard.html">Admin CRM</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Confirmation Modal -->
+    <div class="mum-success-modal" id="enquiry-success-modal">
+        <div class="mum-success-box">
+            <div class="mum-success-icon"><i class="fa fa-check"></i></div>
+            <h3 style="font-family:'Playfair Display',serif; color:var(--color-navy); margin-bottom:6px;">Inquiry Successfully Registered!</h3>
+            <p style="color:var(--color-charcoal); font-size:0.95rem; margin-bottom:12px;">
+                Thank you for choosing Dream Travelkar. Your international Mumbai travel inquiry has been received at our Worli headquarters.
+            </p>
+            <div class="enquiry-id-badge" id="modal-enquiry-id">DT-ENQ-MUM-2026-0000</div>
+            <p style="font-size:0.85rem; color:var(--color-muted); line-height:1.45;">
+                A confirmation has been saved to your session and our CRM. Our dedicated inbound travel specialist will reach out to your WhatsApp/email within 12 hours with a personalized itinerary and clear quotation.
+            </p>
+            <div style="margin-top:24px; display:flex; gap:12px; justify-content:center;">
+                <button class="btn btn-primary" onclick="closeSuccessModal()">Close &amp; Continue Browsing</button>
+                <a href="admin/enquiries.html" class="btn btn-outline-navy" target="_blank">View in Admin CRM</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Action -->
+    <a href="https://wa.me/919867807837?text=Hello%20Dream%20Travelkar,%20I%20am%20interested%20in%20the%20Mumbai%20Tour%20for%20international%20guests." class="dt-whatsapp-float dt-whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+        <i class="fa fa-whatsapp"></i> <span>WhatsApp Us</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/chatbot.js"></script>
+
+    <script>
+        // Dual Currency Switching Logic (INR <-> USD)
+        let activeCurrency = 'INR';
+
+        function setCurrency(curr) {
+            activeCurrency = curr;
+            const btnInr = document.getElementById('btn-curr-inr');
+            const btnUsd = document.getElementById('btn-curr-usd');
+
+            if (curr === 'USD') {
+                btnUsd.classList.add('active');
+                btnInr.classList.remove('active');
+            } else {
+                btnInr.classList.add('active');
+                btnUsd.classList.remove('active');
+            }
+
+            // Update all price tags
+            document.querySelectorAll('.curr-price').forEach(el => {
+                const inr = el.getAttribute('data-inr');
+                const usd = el.getAttribute('data-usd');
+                if (curr === 'USD') {
+                    el.textContent = '$' + Number(usd).toLocaleString();
+                } else {
+                    el.textContent = '₹' + Number(inr).toLocaleString('en-IN');
+                }
+            });
+
+            document.querySelectorAll('.curr-orig').forEach(el => {
+                const inr = el.getAttribute('data-inr');
+                const usd = el.getAttribute('data-usd');
+                if (curr === 'USD') {
+                    el.textContent = '$' + Number(usd).toLocaleString();
+                } else {
+                    el.textContent = '₹' + Number(inr).toLocaleString('en-IN');
+                }
+            });
+        }
+
+        // Prefill form when clicking package 'Inquire / Book'
+        function prefillBooking(packageName) {
+            const selectEl = document.getElementById('guest-package');
+            if (selectEl) {
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (selectEl.options[i].value === packageName) {
+                        selectEl.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            // Scroll to form smoothly
+            const formSection = document.getElementById('mumbai-enquiry');
+            if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Handle International Enquiry Form Submission
+        function handleIntlEnquirySubmit(e) {
+            e.preventDefault();
+
+            const form = document.getElementById('intl-enquiry-form');
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            const name = document.getElementById('guest-name').value.trim();
+            const country = document.getElementById('guest-country').value.trim();
+            const nationality = document.getElementById('guest-nationality').value.trim();
+            const email = document.getElementById('guest-email').value.trim();
+            const phone = document.getElementById('guest-phone').value.trim();
+            const passport = document.getElementById('guest-passport').value.trim();
+            const packageName = document.getElementById('guest-package').value;
+            const flight = document.getElementById('guest-flight').value.trim();
+            const hotel = document.getElementById('guest-hotel').value;
+            const guideLang = document.getElementById('guest-lang').value;
+            const diet = document.getElementById('guest-diet').value;
+            const adults = parseInt(document.getElementById('guest-adults').value) || 2;
+            const children = parseInt(document.getElementById('guest-children').value) || 0;
+            const notes = document.getElementById('guest-notes').value.trim();
+
+            // Gather selected interests
+            const interestEls = document.querySelectorAll('input[name="interests"]:checked');
+            const interests = Array.from(interestEls).map(cb => cb.value);
+
+            // Generate Unique International Mumbai Enquiry ID (DT-ENQ-MUM-2026-XXXX)
+            const randomCode = Math.floor(1000 + Math.random() * 9000);
+            const enquiryId = `DT-ENQ-MUM-2026-${randomCode}`;
+
+            // Create record
+            const enquiryRecord = {
+                id: enquiryId,
+                name: name,
+                email: email,
+                phone: phone,
+                destination: "Mumbai (Explore Mumbai)",
+                travelDate: flight ? flight.substring(0, 30) : new Date().toISOString().split('T')[0],
+                travellers: adults + children,
+                adults: adults,
+                children: children,
+                budget: "International Standard",
+                message: `[International Enquiry] Origin: ${country} | Nationality: ${nationality} | Tour: ${packageName} | Guide Language: ${guideLang} | Diet: ${diet} | Hotel: ${hotel} | Flight: ${flight} | Passport: ${passport || 'N/A'} | Interests: ${interests.join(', ')} | Notes: ${notes}`,
+                package: packageName,
+                country: country,
+                nationality: nationality,
+                passport: passport,
+                guideLanguage: guideLang,
+                dietary: diet,
+                hotelPreference: hotel,
+                flightDetails: flight,
+                interests: interests,
+                customerNotes: notes,
+                isInternational: true,
+                status: "New",
+                createdAt: new Date().toISOString(),
+                source: "explore-mumbai.html"
+            };
+
+            // Save via StorageManager
+            if (typeof StorageManager !== 'undefined' && StorageManager.saveEnquiry) {
+                StorageManager.saveEnquiry(enquiryRecord);
+            } else {
+                // Fallback direct storage
+                try {
+                    const existing = JSON.parse(localStorage.getItem('dt_enquiries') || '[]');
+                    existing.unshift(enquiryRecord);
+                    localStorage.setItem('dt_enquiries', JSON.stringify(existing));
+                } catch(err) {
+                    console.error('Storage error:', err);
+                }
+            }
+
+            // Show Confirmation Modal
+            document.getElementById('modal-enquiry-id').textContent = enquiryId;
+            document.getElementById('enquiry-success-modal').style.display = 'flex';
+
+            form.reset();
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('enquiry-success-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

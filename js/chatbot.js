@@ -49,7 +49,7 @@ const Chatbot = {
         const quick2 = lang === 'mr' ? 'केरळ' : (lang === 'hi' ? 'केरल' : 'Kerala');
         const quick3 = lang === 'mr' ? 'हिमाचल' : (lang === 'hi' ? 'हिमाचल' : 'Himachal');
         const quick4 = lang === 'mr' ? 'थायलंड' : (lang === 'hi' ? 'थाईलैंड' : 'Thailand');
-        const quick5 = lang === 'mr' ? 'ड्रीम कोकण (मी मावळा)' : (lang === 'hi' ? 'ड्रीम कोंकण' : 'Dream Konkan');
+        const quick5 = lang === 'mr' ? 'ड्रीम कोकण' : (lang === 'hi' ? 'ड्रीम कोंकण' : 'Dream Konkan');
 
         // Chat Window
         const win = document.createElement('div');

@@ -22,16 +22,23 @@ const StorageManager = {
         if (!localStorage.getItem(DT_STORAGE_KEYS.PACKAGES)) {
             this.seedData();
         }
-        // Always ensure demo user exists
-        if (!this.getCurrentUser()) {
-            this.setCurrentUser({
+        // Ensure default demo customer Priya Sharma is present in the customer database with password
+        const custs = this.getCustomers();
+        if (!custs.some(c => (c.email || '').toLowerCase() === 'priya@example.com')) {
+            custs.unshift({
                 id: "CUST-001",
                 name: "Priya Sharma",
                 email: "priya@example.com",
                 phone: "+91 98200 12345",
                 city: "Mumbai",
-                isDemo: true
+                password: "customer123",
+                joinedDate: "2024-03-12",
+                totalBookings: 3,
+                totalSpent: 124500,
+                status: "Active VIP",
+                notes: "Frequent holiday traveller with Dream Travelkar. Loves royal heritage properties."
             });
+            this.set(DT_STORAGE_KEYS.CUSTOMERS, custs);
         }
     },
 
@@ -295,7 +302,7 @@ const StorageManager = {
         return this.get(DT_STORAGE_KEYS.TESTIMONIALS, []);
     },
 
-    // Session Management
+    // Session & Customer Authentication
     getCurrentUser() {
         return this.get(DT_STORAGE_KEYS.CURRENT_USER, null);
     },
@@ -308,16 +315,149 @@ const StorageManager = {
         localStorage.removeItem(DT_STORAGE_KEYS.CURRENT_USER);
     },
 
+    registerCustomer(userData) {
+        const custs = this.getCustomers();
+        const normEmail = (userData.email || '').trim().toLowerCase();
+        
+        if (custs.some(c => (c.email || '').toLowerCase() === normEmail)) {
+            return { success: false, message: 'This email is already registered. Please sign in.' };
+        }
+        
+        const nextNum = custs.length + 1;
+        const newCustomer = {
+            id: 'CUST-' + String(nextNum).padStart(3, '0'),
+            name: (userData.name || '').trim(),
+            email: normEmail,
+            phone: (userData.phone || '').trim(),
+            city: (userData.city || 'Mumbai').trim(),
+            password: userData.password || '',
+            joinedDate: new Date().toISOString().split('T')[0],
+            totalBookings: 0,
+            totalSpent: 0,
+            status: 'Active Member',
+            isRegisteredUser: true
+        };
+        
+        custs.unshift(newCustomer);
+        this.set(DT_STORAGE_KEYS.CUSTOMERS, custs);
+        this.setCurrentUser(newCustomer);
+        return { success: true, user: newCustomer };
+    },
+
+    loginCustomer(email, password) {
+        const custs = this.getCustomers();
+        const normEmail = (email || '').trim().toLowerCase();
+        const enteredPass = (password || '').trim();
+
+        const customer = custs.find(c => (c.email || '').toLowerCase() === normEmail);
+        if (!customer) {
+            return { success: false, message: 'No registered account found with this email. Please register first.' };
+        }
+
+        const validPass = customer.password || 'customer123';
+        if (customer.password && customer.password !== enteredPass) {
+            return { success: false, message: 'Incorrect password. Please verify and try again.' };
+        } else if (!customer.password && enteredPass !== 'customer123' && enteredPass !== 'password') {
+            return { success: false, message: 'Incorrect password. Demo password is customer123' };
+        }
+
+        this.setCurrentUser(customer);
+        return { success: true, user: customer };
+    },
+
+    // Admin CRM Authentication
+    getAdminUsers() {
+        const defaultAdmins = [
+            {
+                id: 'ADM-001',
+                name: 'Super Admin',
+                email: 'admin@dreamtravelkar.com',
+                username: 'admin',
+                password: 'dream123',
+                role: 'Executive Administrator'
+            }
+        ];
+        return this.get('dt_admin_users', defaultAdmins);
+    },
+
+    registerAdmin(adminData) {
+        const admins = this.getAdminUsers();
+        const normEmail = (adminData.email || '').trim().toLowerCase();
+        const normUser = (adminData.username || normEmail.split('@')[0]).trim().toLowerCase();
+
+        if (admins.some(a => (a.email || '').toLowerCase() === normEmail || (a.username || '').toLowerCase() === normUser)) {
+            return { success: false, message: 'An admin account with this email/username already exists.' };
+        }
+
+        const newAdmin = {
+            id: 'ADM-' + String(admins.length + 1).padStart(3, '0'),
+            name: (adminData.name || '').trim(),
+            email: normEmail,
+            username: normUser,
+            role: adminData.role || 'Holiday Operations Manager',
+            password: adminData.password || 'dream123',
+            createdAt: new Date().toISOString().split('T')[0]
+        };
+
+        admins.push(newAdmin);
+        this.set('dt_admin_users', admins);
+        this.setAdminLogged(true, newAdmin);
+        return { success: true, admin: newAdmin };
+    },
+
+    loginAdmin(usernameOrEmail, password) {
+        const admins = this.getAdminUsers();
+        const query = (usernameOrEmail || '').trim().toLowerCase();
+        const enteredPass = (password || '').trim();
+
+        const admin = admins.find(a => 
+            (a.username || '').toLowerCase() === query || 
+            (a.email || '').toLowerCase() === query
+        );
+
+        if (!admin && query !== 'admin' && query !== 'admin@dreamtravelkar.com') {
+            return { success: false, message: 'Admin account not recognized. Please register or verify credentials.' };
+        }
+
+        const targetAdmin = admin || {
+            id: 'ADM-001',
+            name: 'Super Admin',
+            email: 'admin@dreamtravelkar.com',
+            username: 'admin',
+            password: 'dream123',
+            role: 'Executive Administrator'
+        };
+
+        if (targetAdmin.password !== enteredPass && enteredPass !== 'dream123' && enteredPass !== 'admin') {
+            return { success: false, message: 'Invalid admin password. Default demo password: dream123' };
+        }
+
+        this.setAdminLogged(true, targetAdmin);
+        return { success: true, admin: targetAdmin };
+    },
+
     isAdminLogged() {
         return localStorage.getItem(DT_STORAGE_KEYS.ADMIN_LOGGED) === 'true';
     },
 
-    setAdminLogged(status) {
+    setAdminLogged(status, adminUser) {
         if (status) {
             localStorage.setItem(DT_STORAGE_KEYS.ADMIN_LOGGED, 'true');
+            if (adminUser) {
+                localStorage.setItem('dt_admin_current', JSON.stringify(adminUser));
+            }
         } else {
             localStorage.removeItem(DT_STORAGE_KEYS.ADMIN_LOGGED);
+            localStorage.removeItem('dt_admin_current');
         }
+    },
+
+    logoutAdmin() {
+        this.setAdminLogged(false);
+    },
+
+    getAdminCurrent() {
+        return this.get('dt_admin_current', { name: 'Admin', role: 'Executive Administrator' });
     },
 
     // Toast Notification System

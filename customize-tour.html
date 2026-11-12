@@ -71,13 +71,15 @@
                                     </div>
                                 </div>
                                 <div class="dropdown-footer-bar">
-                                    <a href="destinations.html">Explore All 12+ Destinations &rarr;</a>
+                                    <div class="dropdown-footer-actions">
+                                        <a href="packages.html"><i class="fa fa-suitcase"></i> Tour Packages</a>
+                                        <a href="customize-tour.html"><i class="fa fa-sliders"></i> Customize Tour</a>
+                                    </div>
+                                    <a href="destinations.html" class="dest-view-all">Explore All 12+ Destinations &rarr;</a>
                                 </div>
                             </div>
                         </li>
 
-                        <li class="nav-item"><a href="packages.html" class="nav-link">Tour Packages</a></li>
-                        <li class="nav-item active"><a href="customize-tour.html" class="nav-link">Customize Tour</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                         <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -86,20 +88,20 @@
 
                 <!-- 3. RIGHT: Actions (Language, Customer Account, Plan Your Trip CTA) -->
                 <div class="navbar-actions-section">
-                    <!-- Language Selector with Marathi / मी मावळा -->
+                    <!-- Language Selector with English / Marathi -->
                     <div class="nav-action-item nav-lang-dropdown" id="nav-lang-dropdown">
                         <button type="button" class="lang-trigger-btn" aria-haspopup="true" aria-expanded="false" title="Language Selector">
                             <i class="fa fa-language"></i>
-                            <span class="current-lang-label">मी मावळा</span>
+                            <span class="current-lang-label">English</span>
                             <i class="fa fa-angle-down nav-caret"></i>
                         </button>
                         <div class="lang-menu" role="menu">
-                            <a href="javascript:void(0)" class="lang-option active" data-lang="mr">
-                                <span class="lang-name">मराठी (मी मावळा)</span>
+                            <a href="javascript:void(0)" class="lang-option active" data-lang="en">
+                                <span class="lang-name">English</span>
                                 <i class="fa fa-check lang-check"></i>
                             </a>
-                            <a href="javascript:void(0)" class="lang-option" data-lang="en">
-                                <span class="lang-name">English</span>
+                            <a href="javascript:void(0)" class="lang-option" data-lang="mr">
+                                <span class="lang-name">मराठी</span>
                                 <i class="fa fa-check lang-check"></i>
                             </a>
                             <a href="javascript:void(0)" class="lang-option" data-lang="hi">
@@ -196,18 +198,18 @@
                         <li><a href="destination-details.html?id=dest-kerala">Kerala Backwaters &amp; Munnar</a></li>
                         <li><a href="destination-details.html?id=dest-himachal">Himachal Pradesh</a></li>
                         <li><a href="destination-details.html?id=dest-andaman">Andaman Coral Islands</a></li>
-                        <li><a href="destination-details.html?id=dest-konkan">Dream Konkan (मी मावळा)</a></li>
+                        <li><a href="destination-details.html?id=dest-konkan">Dream Konkan &amp; Sindhudurg</a></li>
                         <li><a href="destination-details.html?id=dest-kashmir">Majestic Kashmir Valley</a></li>
                         <li class="drawer-sub-header">World Holidays</li>
                         <li><a href="destination-details.html?id=dest-thailand">Thailand</a></li>
                         <li><a href="destination-details.html?id=dest-dubai">Dubai</a></li>
                         <li><a href="destination-details.html?id=dest-bali">Bali</a></li>
                         <li><a href="destination-details.html?id=dest-switzerland">Switzerland</a></li>
+                        <li><a href="packages.html" style="font-weight:600; color:var(--color-navy);"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
+                        <li><a href="customize-tour.html" style="font-weight:600; color:var(--color-navy);"><i class="fa fa-sliders"></i> Customize Tour</a></li>
                         <li><a href="destinations.html" style="font-weight:600; color:var(--color-ocean);">View All Destinations &rarr;</a></li>
                     </ul>
                 </li>
-                <li><a href="packages.html" class="drawer-nav-link"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
-                <li><a href="customize-tour.html" class="drawer-nav-link active"><i class="fa fa-sliders"></i> Customize Tour</a></li>
                 <li><a href="about.html" class="drawer-nav-link"><i class="fa fa-info-circle"></i> About Us</a></li>
                 <li><a href="reviews.html" class="drawer-nav-link"><i class="fa fa-star-o"></i> Reviews</a></li>
                 <li><a href="contact.html" class="drawer-nav-link"><i class="fa fa-envelope-o"></i> Contact</a></li>
@@ -216,8 +218,8 @@
             <div class="drawer-lang-selector">
                 <span class="drawer-section-title">Language</span>
                 <div class="drawer-lang-pills">
-                    <button type="button" class="drawer-lang-btn active" data-lang="mr">मराठी (मी मावळा)</button>
-                    <button type="button" class="drawer-lang-btn" data-lang="en">English</button>
+                    <button type="button" class="drawer-lang-btn" data-lang="mr">मराठी</button>
+                    <button type="button" class="drawer-lang-btn active" data-lang="en">English</button>
                     <button type="button" class="drawer-lang-btn" data-lang="hi">हिन्दी</button>
                 </div>
             </div>
@@ -253,7 +255,7 @@
                 <div class="contact-box-card">
                     <h2 style="font-size:1.6rem; color:var(--color-navy); margin-bottom:6px;">Tell Us About Your Travel Plans</h2>
                     <p style="font-size:0.92rem; color:var(--color-muted); margin-bottom:28px;">
-                        Fill in this form and our senior holiday consultant will reach out via WhatsApp/Call with a detailed proposal within 2 hours.
+                        Fill in this form and our senior Dream Travelkar holiday consultant will reach out via WhatsApp/Call with a detailed proposal within 2 hours.
                     </p>
 
                     <form id="custom-tour-form">
@@ -292,7 +294,7 @@
 
                         <div class="form-row-3col">
                             <div class="form-group">
-                                <label class="form-label">Travellers</label>
+                                <label class="form-label">Number of Guests</label>
                                 <select id="cust-travellers" class="form-control">
                                     <option value="1">1 Solo</option>
                                     <option value="2" selected>2 Adults (Couple)</option>
@@ -321,11 +323,11 @@
                             </div>
                         </div>
 
-                        <!-- Special Heritage "मी मावळा" check -->
+                        <!-- Special Heritage circuit check -->
                         <div id="mimavala" style="background:var(--color-sand-light); border:1.5px solid var(--color-gold); border-radius:var(--radius-md); padding:16px; margin-bottom:18px;">
                             <label style="display:flex; align-items:flex-start; gap:10px; font-weight:700; color:var(--color-navy); cursor:pointer;">
                                 <input type="checkbox" id="check-mimavala" style="width:18px; height:18px; margin-top:3px; flex-shrink:0;">
-                                <span style="font-size:0.9rem; line-height:1.45;"><span style="color:#c2410c;">मी मावळा हेरिटेज विशेष:</span> Interested in Chhatrapati Shivaji Maharaj Forts / Konkan Sea-Forts / Ashtavinayak Pilgrimage</span>
+                                <span style="font-size:0.9rem; line-height:1.45;"><span style="color:#c2410c;">महाराष्ट्र हेरिटेज विशेष:</span> Interested in Chhatrapati Shivaji Maharaj Forts / Konkan Sea-Forts / Ashtavinayak Pilgrimage</span>
                             </label>
                         </div>
 
@@ -340,7 +342,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-gold btn-lg" style="width:100%;">
-                            <i class="fa fa-paper-plane"></i> Submit Itinerary Request to Travelkar Team
+                            <i class="fa fa-paper-plane"></i> Submit Itinerary Request to Dream Travelkar Team
                         </button>
                     </form>
 
@@ -423,5 +425,6 @@
     <script src="js/main.js"></script>
     <script src="js/enquiries.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>

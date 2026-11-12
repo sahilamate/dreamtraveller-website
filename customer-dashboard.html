@@ -71,13 +71,15 @@
                                     </div>
                                 </div>
                                 <div class="dropdown-footer-bar">
-                                    <a href="destinations.html">Explore All 12+ Destinations &rarr;</a>
+                                    <div class="dropdown-footer-actions">
+                                        <a href="packages.html"><i class="fa fa-suitcase"></i> Tour Packages</a>
+                                        <a href="customize-tour.html"><i class="fa fa-sliders"></i> Customize Tour</a>
+                                    </div>
+                                    <a href="destinations.html" class="dest-view-all">Explore All 12+ Destinations &rarr;</a>
                                 </div>
                             </div>
                         </li>
 
-                        <li class="nav-item"><a href="packages.html" class="nav-link">Tour Packages</a></li>
-                        <li class="nav-item"><a href="customize-tour.html" class="nav-link">Customize Tour</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
                         <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -86,20 +88,20 @@
 
                 <!-- 3. RIGHT: Actions (Language, Customer Account, Plan Your Trip CTA) -->
                 <div class="navbar-actions-section">
-                    <!-- Language Selector with Marathi / मी मावळा -->
+                    <!-- Language Selector with English / Marathi -->
                     <div class="nav-action-item nav-lang-dropdown" id="nav-lang-dropdown">
                         <button type="button" class="lang-trigger-btn" aria-haspopup="true" aria-expanded="false" title="Language Selector">
                             <i class="fa fa-language"></i>
-                            <span class="current-lang-label">मी मावळा</span>
+                            <span class="current-lang-label">English</span>
                             <i class="fa fa-angle-down nav-caret"></i>
                         </button>
                         <div class="lang-menu" role="menu">
-                            <a href="javascript:void(0)" class="lang-option active" data-lang="mr">
-                                <span class="lang-name">मराठी (मी मावळा)</span>
+                            <a href="javascript:void(0)" class="lang-option active" data-lang="en">
+                                <span class="lang-name">English</span>
                                 <i class="fa fa-check lang-check"></i>
                             </a>
-                            <a href="javascript:void(0)" class="lang-option" data-lang="en">
-                                <span class="lang-name">English</span>
+                            <a href="javascript:void(0)" class="lang-option" data-lang="mr">
+                                <span class="lang-name">मराठी</span>
                                 <i class="fa fa-check lang-check"></i>
                             </a>
                             <a href="javascript:void(0)" class="lang-option" data-lang="hi">
@@ -196,18 +198,18 @@
                         <li><a href="destination-details.html?id=dest-kerala">Kerala Backwaters &amp; Munnar</a></li>
                         <li><a href="destination-details.html?id=dest-himachal">Himachal Pradesh</a></li>
                         <li><a href="destination-details.html?id=dest-andaman">Andaman Coral Islands</a></li>
-                        <li><a href="destination-details.html?id=dest-konkan">Dream Konkan (मी मावळा)</a></li>
+                        <li><a href="destination-details.html?id=dest-konkan">Dream Konkan &amp; Sindhudurg</a></li>
                         <li><a href="destination-details.html?id=dest-kashmir">Majestic Kashmir Valley</a></li>
                         <li class="drawer-sub-header">World Holidays</li>
                         <li><a href="destination-details.html?id=dest-thailand">Thailand</a></li>
                         <li><a href="destination-details.html?id=dest-dubai">Dubai</a></li>
                         <li><a href="destination-details.html?id=dest-bali">Bali</a></li>
                         <li><a href="destination-details.html?id=dest-switzerland">Switzerland</a></li>
+                        <li><a href="packages.html" style="font-weight:600; color:var(--color-navy);"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
+                        <li><a href="customize-tour.html" style="font-weight:600; color:var(--color-navy);"><i class="fa fa-sliders"></i> Customize Tour</a></li>
                         <li><a href="destinations.html" style="font-weight:600; color:var(--color-ocean);">View All Destinations &rarr;</a></li>
                     </ul>
                 </li>
-                <li><a href="packages.html" class="drawer-nav-link"><i class="fa fa-suitcase"></i> Tour Packages</a></li>
-                <li><a href="customize-tour.html" class="drawer-nav-link"><i class="fa fa-sliders"></i> Customize Tour</a></li>
                 <li><a href="about.html" class="drawer-nav-link"><i class="fa fa-info-circle"></i> About Us</a></li>
                 <li><a href="reviews.html" class="drawer-nav-link"><i class="fa fa-star-o"></i> Reviews</a></li>
                 <li><a href="contact.html" class="drawer-nav-link"><i class="fa fa-envelope-o"></i> Contact</a></li>
@@ -216,8 +218,8 @@
             <div class="drawer-lang-selector">
                 <span class="drawer-section-title">Language</span>
                 <div class="drawer-lang-pills">
-                    <button type="button" class="drawer-lang-btn active" data-lang="mr">मराठी (मी मावळा)</button>
-                    <button type="button" class="drawer-lang-btn" data-lang="en">English</button>
+                    <button type="button" class="drawer-lang-btn" data-lang="mr">मराठी</button>
+                    <button type="button" class="drawer-lang-btn active" data-lang="en">English</button>
                     <button type="button" class="drawer-lang-btn" data-lang="hi">हिन्दी</button>
                 </div>
             </div>
@@ -490,5 +492,6 @@
     <script src="js/bookings.js"></script>
     <script src="js/customer.js"></script>
     <script src="js/chatbot.js"></script>
+    <script src="js/cursor.js"></script>
 </body>
 </html>

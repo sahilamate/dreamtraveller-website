@@ -80,7 +80,7 @@ function handleCustomTourSubmission(e) {
     // Reset form
     e.target.reset();
 
-    StorageManager.showToast(`Thank you ${name}! Your customized holiday enquiry (${saved.id}) has been recorded. Our travel planning specialist will reach out shortly.`, 'success');
+    StorageManager.showToast(`Thank you ${name}! Your customized holiday enquiry (${saved.id}) has been recorded. Our Dream Travelkar planning specialist will reach out shortly.`, 'success');
 
     // Display confirmation on page if feedback container exists
     const feedbackBox = document.getElementById('enquiry-confirmation-box');

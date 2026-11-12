@@ -1,6 +1,6 @@
 /**
  * Dream Travelkar - Multi-Language Translation System (i18n)
- * Supports: Marathi (मराठी - मी मावळा), English, and Hindi (हिन्दी)
+ * Supports: Marathi (मराठी), English, and Hindi (हिन्दी)
  * Client-side, zero-framework, persistent with localStorage.
  */
 
@@ -14,6 +14,7 @@ const I18nManager = (function () {
             "nav_home": "मुख्यपृष्ठ",
             "nav_destinations": "पर्यटन स्थळे",
             "nav_packages": "टूर पॅकेजेस",
+            "nav_mumbai": "एक्सप्लोर मुंबई",
             "nav_customize": "कस्टमाइझ टूर",
             "nav_about": "आमच्याबद्दल",
             "nav_reviews": "अभिप्राय",
@@ -39,8 +40,6 @@ const I18nManager = (function () {
             "topbar_call": "आम्हाला कॉल करा:",
             "topbar_email": "info@dreamtravelkar.com",
             "topbar_address": "वरळी, मुंबई - ४०००१८",
-            "topbar_tagline": "•|| गडकोट गडकोट जय शिवराय ||•",
-            "topbar_heritage": "मी मावळा हेरिटेज टूर",
             "topbar_admin": "अ‍ॅडमिन CRM",
 
             // Mobile Drawer
@@ -52,6 +51,13 @@ const I18nManager = (function () {
 
             // Hero Section
             "hero_badge": "विश्वसनीय टूर ऑपरेटर्स • वरळी, मुंबई",
+            "hero_eyebrow": "क्युरेटेड हॉलिडेज • भारत आणि जगभर",
+            "hero_title_1": "जगाचा शोध घ्या.",
+            "hero_title_2": "प्रत्येक क्षण अनुभवा.",
+            "hero_description": "विचारपूर्वक नियोजित सहली, समृद्ध स्थानिक अनुभव आणि आतिथ्य — तुमची स्वप्ने तुम्हाला जिथे नेतील तिथे.",
+            "hero_btn_explore": "पर्यटन स्थळे पहा",
+            "hero_btn_mumbai": "मुंबई दर्शन",
+            "hero_tagline_bottom": "तुमची सहल, वैयक्तिकरित्या डिझाइन केलेली",
             "hero_title": "जगाचा शोध घ्या. आयुष्यभरासाठी आठवणी बनवा.",
             "hero_desc": "अविस्मरणीय पर्यटन स्थळे, विचारपूर्वक डिझाइन केलेल्या सहली आणि आयुष्यभर सोबत राहणारे अनुभव. भारताच्या विश्वासार्ह ट्रॅव्हल तज्ज्ञांकडून.",
             "hero_explore": "पर्यटन स्थळे पहा",
@@ -81,6 +87,19 @@ const I18nManager = (function () {
             "dest_explore_btn": "सविस्तर माहिती पहा →",
             "dest_start_from": "किंमत सुरू:",
             "dest_view_all": "सर्व पर्यटन स्थळे पहा",
+
+            // Mumbai Feature Banner
+            "mum_feat_eyebrow": "खास मुंबई दर्शन अनुभव",
+            "mum_feat_title1": "मुंबई दर्शन –",
+            "mum_feat_title2": "स्वप्नांच्या शहराचा अनोखा प्रवास.",
+            "mum_feat_desc": "आंतरराष्ट्रीय आणि देशांतर्गत पर्यटकांसाठी खास डिझाइन केलेल्या खाजगी आणि मार्गदर्शित टूरसह मुंबईचा अनुभव घ्या.",
+            "mum_feat_btn": "मुंबई टूर्स एक्सप्लोर करा",
+            "attract_gateway": "गेटवे ऑफ इंडिया",
+            "attract_marine": "मरीन ड्राइव्ह",
+            "attract_csmt": "सीएसएमटी",
+            "attract_dhobi": "धोबी घाट",
+            "attract_elephanta": "एलिफंटा लेणी",
+            "attract_food": "खाद्यसंस्कृती व वारसा",
 
             // Packages Section
             "pkg_sec_title": "लोकप्रिय टूर पॅकेजेस",
@@ -137,7 +156,7 @@ const I18nManager = (function () {
 
             // WhatsApp & Chatbot
             "whatsapp_btn_text": "व्हॉट्सॲपवर संपर्क करा",
-            "chatbot_title": "ड्रीम ट्रॅव्हल असिस्टंट",
+            "chatbot_title": "ड्रीम ट्रॅव्हलकर असिस्टंट",
             "chatbot_placeholder": "सहलीबद्दल काहीही विचारा..."
         },
 
@@ -146,6 +165,7 @@ const I18nManager = (function () {
             "nav_home": "मुख्य पृष्ठ",
             "nav_destinations": "प्रमुख गंतव्य",
             "nav_packages": "टूर पैकेज",
+            "nav_mumbai": "एक्सप्लोर मुंबई",
             "nav_customize": "कस्टमाइज टूर",
             "nav_about": "हमारे बारे में",
             "nav_reviews": "समीक्षाएं",
@@ -171,8 +191,6 @@ const I18nManager = (function () {
             "topbar_call": "हमें कॉल करें:",
             "topbar_email": "info@dreamtravelkar.com",
             "topbar_address": "वर्ली, मुंबई - ४०००१८",
-            "topbar_tagline": "•|| गडकोट गडकोट जय शिवराय ||•",
-            "topbar_heritage": "मी मावळा हेरिटेज टूर",
             "topbar_admin": "एडमिन CRM",
 
             // Mobile Drawer
@@ -184,6 +202,13 @@ const I18nManager = (function () {
 
             // Hero Section
             "hero_badge": "विश्वसनीय टूर ऑपरेटर्स • वर्ली, मुंबई",
+            "hero_eyebrow": "क्यूरेटेड हॉलिडेज • भारत और दुनिया भर",
+            "hero_title_1": "दुनिया देखें।",
+            "hero_title_2": "हर पल को महसूस करें।",
+            "hero_description": "सोच-समझकर नियोजित यात्राएं, सार्थक स्थानीय अनुभव और आतिथ्य — जहाँ भी आपके सपने आपको ले जाएं।",
+            "hero_btn_explore": "गंतव्य स्थल देखें",
+            "hero_btn_mumbai": "मुंबई दर्शन",
+            "hero_tagline_bottom": "आपकी यात्रा, व्यक्तिगत रूप से तैयार",
             "hero_title": "दुनिया की खोज करें. जीवनभर के लिए यादें बनाएं.",
             "hero_desc": "अविस्मरणीय गंतव्य, सोच-समझकर डिज़ाइन की गई छुट्टियां और जीवनभर साथ रहने वाले अनुभव. भारत के विश्वसनीय यात्रा विशेषज्ञों द्वारा.",
             "hero_explore": "गंतव्य देखें",
@@ -213,6 +238,19 @@ const I18nManager = (function () {
             "dest_explore_btn": "विस्तृत जानकारी देखें →",
             "dest_start_from": "शुरुआती कीमत:",
             "dest_view_all": "सभी गंतव्य देखें",
+
+            // Mumbai Feature Banner
+            "mum_feat_eyebrow": "विशेष मुंबई दर्शन अनुभव",
+            "mum_feat_title1": "मुंबई दर्शन –",
+            "mum_feat_title2": "सपनों के शहर की यादगार यात्रा।",
+            "mum_feat_desc": "विदेशी और घरेलू पर्यटकों के लिए विशेष रूप से डिज़ाइन किए गए निजी और विचारशील टूर के साथ मुंबई की धड़कन महसूस करें।",
+            "mum_feat_btn": "मुंबई टूर्स एक्सप्लोर करें",
+            "attract_gateway": "गेटवे ऑफ इंडिया",
+            "attract_marine": "मरीन ड्राइव",
+            "attract_csmt": "सीएसएमटी",
+            "attract_dhobi": "धोबी घाट",
+            "attract_elephanta": "एलिफेंटा गुफाएं",
+            "attract_food": "स्ट्रीट फूड और संस्कृति",
 
             // Packages Section
             "pkg_sec_title": "लोकप्रिय टूर पैकेज",
@@ -269,7 +307,7 @@ const I18nManager = (function () {
 
             // WhatsApp & Chatbot
             "whatsapp_btn_text": "व्हाट्सएप पर संपर्क करें",
-            "chatbot_title": "ड्रीम ट्रैवल असिस्टेंट",
+            "chatbot_title": "ड्रीम ट्रॅवलकर असिस्टेंट",
             "chatbot_placeholder": "यात्रा के बारे में कुछ भी पूछें..."
         },
 
@@ -278,6 +316,7 @@ const I18nManager = (function () {
             "nav_home": "Home",
             "nav_destinations": "Destinations",
             "nav_packages": "Tour Packages",
+            "nav_mumbai": "Explore Mumbai",
             "nav_customize": "Customize Tour",
             "nav_about": "About Us",
             "nav_reviews": "Reviews",
@@ -303,8 +342,6 @@ const I18nManager = (function () {
             "topbar_call": "Call Us:",
             "topbar_email": "info@dreamtravelkar.com",
             "topbar_address": "Worli, Mumbai - 400018",
-            "topbar_tagline": "•|| गडकोट गडकोट जय शिवराय ||•",
-            "topbar_heritage": "मी मावळा हेरिटेज टूर",
             "topbar_admin": "Admin CRM",
 
             // Mobile Drawer
@@ -316,8 +353,15 @@ const I18nManager = (function () {
 
             // Hero Section
             "hero_badge": "Established Tour Operators • Worli, Mumbai",
-            "hero_title": "Discover the World. Create Memories That Last Forever.",
-            "hero_desc": "Explore unforgettable destinations, thoughtfully designed holidays and experiences that stay with you for a lifetime. Curated by India's trusted travel specialists.",
+            "hero_eyebrow": "CURATED HOLIDAYS • INDIA & BEYOND",
+            "hero_title_1": "See the world.",
+            "hero_title_2": "Feel every moment.",
+            "hero_description": "Thoughtfully planned journeys, meaningful local experiences and warm hospitality — wherever your dreams take you.",
+            "hero_btn_explore": "Explore destinations",
+            "hero_btn_mumbai": "Discover Mumbai",
+            "hero_tagline_bottom": "YOUR JOURNEY, PERSONALLY CRAFTED",
+            "hero_title": "See the world. Feel every moment.",
+            "hero_desc": "Thoughtfully planned journeys, meaningful local experiences and warm hospitality — wherever your dreams take you.",
             "hero_explore": "Explore Destinations",
             "hero_customize": "Customize Your Trip",
             "search_dest_label": "Destination",
@@ -345,6 +389,19 @@ const I18nManager = (function () {
             "dest_explore_btn": "Explore Destination →",
             "dest_start_from": "Starting from:",
             "dest_view_all": "View All Destinations",
+
+            // Mumbai Feature Banner
+            "mum_feat_eyebrow": "A SIGNATURE CITY EXPERIENCE",
+            "mum_feat_title1": "Explore Mumbai –",
+            "mum_feat_title2": "Discover the City of Dreams.",
+            "mum_feat_desc": "Feel the rhythm of India's most captivating city with a private, thoughtfully guided experience designed for international visitors.",
+            "mum_feat_btn": "Explore Mumbai tours",
+            "attract_gateway": "Gateway of India",
+            "attract_marine": "Marine Drive",
+            "attract_csmt": "CSMT",
+            "attract_dhobi": "Dhobi Ghat",
+            "attract_elephanta": "Elephanta Caves",
+            "attract_food": "Food & culture",
 
             // Packages Section
             "pkg_sec_title": "Popular Tour Packages",
@@ -401,7 +458,7 @@ const I18nManager = (function () {
 
             // WhatsApp & Chatbot
             "whatsapp_btn_text": "WhatsApp Us",
-            "chatbot_title": "Dream Travel Assistant",
+            "chatbot_title": "Dream Travelkar Assistant",
             "chatbot_placeholder": "Ask about destinations, packages, or pricing..."
         }
     };
@@ -429,8 +486,8 @@ const I18nManager = (function () {
             en: { name: "Andaman & Nicobar", tagline: "Turquoise Waters, Coral Reefs & White Sands" }
         },
         "dest-konkan": {
-            mr: { name: "ड्रीम कोकण (मी मावळा)", tagline: "सिंधुदुर्ग जलदुर्ग, मालवणी आतिथ्य आणि नितांत सुंदर किनारे" },
-            hi: { name: "ड्रीम कोंकण (मी मावळा)", tagline: "सिंधुदुर्ग जलदुर्ग और खूबसूरत तटीय नज़ारे" },
+            mr: { name: "ड्रीम कोकण", tagline: "सिंधुदुर्ग जलदुर्ग, मालवणी आतिथ्य आणि नितांत सुंदर किनारे" },
+            hi: { name: "ड्रीम कोंकण", tagline: "सिंधुदुर्ग जलदुर्ग और खूबसूरत तटीय नज़ारे" },
             en: { name: "Dream Konkan", tagline: "Historic Sea-Forts, Malvan Cuisine & Unspoiled Beaches" }
         },
         "dest-kashmir": {
@@ -467,6 +524,21 @@ const I18nManager = (function () {
             mr: { name: "व्हिएतनाम", tagline: "हा लाँग बे क्रूझ, दा नांग आणि गोल्डन ब्रिज" },
             hi: { name: "वियतनाम", tagline: "हा लोंग बे क्रूज, दा नांग और गोल्डन ब्रिज" },
             en: { name: "Vietnam", tagline: "Ha Long Bay Cruises, Ba Na Hills & Heritage Towns" }
+        },
+        "dest-goa": {
+            mr: { name: "गोवा", tagline: "सोनेरी समुद्रकिनारे, पोर्तुगीज वारसा आणि निसर्गरम्य जलक्रीडा" },
+            hi: { name: "गोवा", tagline: "सुनहरे समुद्र तट, पुर्तगाली धरोहर और वाटर स्पोर्ट्स" },
+            en: { name: "Goa Beach & Heritage", tagline: "Sun-Kissed Beaches, Portuguese Heritage & Sunset Cruises" }
+        },
+        "dest-uttarakhand": {
+            mr: { name: "उत्तराखंड", tagline: "देवभूमी, ऋषिकेश गंगा आरती आणि नयनरम्य हिमालयाचे खोरे" },
+            hi: { name: "उत्तराखंड", tagline: "देवभूमि, ऋषिकेश गंगा आरती और हिमालयी वादियां" },
+            en: { name: "Uttarakhand Devbhoomi", tagline: "Holy Ganges River, Rishikesh Yoga & Himalayan Valleys" }
+        },
+        "dest-maldives": {
+            mr: { name: "मालदीव", tagline: "लक्झरी वॉटर व्हिला, स्फटिकासारखे निळे पाणी आणि प्रवाळ बेट" },
+            hi: { name: "मालदीव", tagline: "लक्ज़री वाटर विला, क्रिस्टल क्लियर लैगून और कोरल द्वीप" },
+            en: { name: "Maldives Luxury Atolls", tagline: "Overwater Villas, Turquoise Lagoons & Coral Reef Escapes" }
         }
     };
 
@@ -508,6 +580,24 @@ const I18nManager = (function () {
         { en: "Explore Destination", mr: "सविस्तर पहा", hi: "विस्तार से देखें" },
 
         // Common Nav & Buttons
+        { en: "Explore Mumbai", mr: "एक्सप्लोर मुंबई", hi: "एक्सप्लोर मुंबई" },
+        { en: "Discover the City of Dreams", mr: "स्वप्नांच्या मुंबईचे दर्शन", hi: "सपनों के शहर मुंबई का अन्वेषण" },
+        { en: "Gateway of India", mr: "गेटवे ऑफ इंडिया", hi: "गेटवे ऑफ इंडिया" },
+        { en: "Taj Mahal Palace Hotel", mr: "ताज महाल पॅलेस हॉटेल", hi: "ताज महल पैलेस होटल" },
+        { en: "Marine Drive", mr: "मरीन ड्राईव्ह (क्वीन्स नेकलेस)", hi: "मरीन ड्राइव (क्वीन्स नेकलेस)" },
+        { en: "Chhatrapati Shivaji Maharaj Terminus", mr: "छत्रपती शिवाजी महाराज टर्मिनस (CSMT)", hi: "छत्रपति शिवाजी महाराज टर्मिनस (CSMT)" },
+        { en: "Dhobi Ghat", mr: "धोबी घाट", hi: "धोबी घाट" },
+        { en: "Dharavi Tour", mr: "धारावी कम्युनिटी टूर", hi: "धारावी कम्युनिटी टूर" },
+        { en: "Siddhivinayak Temple", mr: "श्री सिद्धिविनायक मंदिर", hi: "श्री सिद्धिविनायक मंदिर" },
+        { en: "Haji Ali Dargah", mr: "हाजी अली दर्गा", hi: "हाजी अली दरगाह" },
+        { en: "Elephanta Caves", mr: "एलिफंटा लेणी (घारापुरी)", hi: "एलिफेंटा गुफाएं" },
+        { en: "Mumbai Street Food & Cultural Safari", mr: "मुंबई स्ट्रीट फूड व कल्चरल सफारी", hi: "मुंबई स्ट्रीट फूड और सांस्कृतिक सफारी" },
+        { en: "Bollywood Tour", mr: "बॉलीवूड टूर व फिल्म स्टुडिओ", hi: "बॉलीवुड टूर और फिल्म स्टूडियो" },
+        { en: "Half-Day Mumbai City Tour", mr: "हाफ-डे मुंबई दर्शन सहल", hi: "हाफ-डे मुंबई दर्शन टूर" },
+        { en: "Full-Day Mumbai Heritage & Cultural Tour", mr: "फुल-डे मुंबई हेरिटेज व सांस्कृतिक टूर", hi: "फुल-डे मुंबई हेरिटेज व सांस्कृतिक टूर" },
+        { en: "2 Days / 1 Night Mumbai Complete Experience", mr: "२ दिवस / १ रात्र संपूर्ण मुंबई अनुभव", hi: "२ दिन / १ रात संपूर्ण मुंबई अनुभव" },
+        { en: "3 Days / 2 Nights Mumbai & Elephanta Discovery", mr: "३ दिवस / २ रात्री मुंबई व एलिफंटा लेणी शोध", hi: "३ दिन / २ रात मुंबई व एलिफेंटा गुफाएं दर्शन" },
+        { en: "Customized Private Tour for International Guests", mr: "विदेशी पर्यटकांसाठी कस्टमाइज खाजगी टूर", hi: "विदेशी पर्यटकों के लिए कस्टमाइज निजी टूर" },
         { en: "Home", mr: "मुख्यपृष्ठ", hi: "मुख्य पृष्ठ" },
         { en: "Destinations", mr: "पर्यटन स्थळे", hi: "प्रमुख गंतव्य" },
         { en: "Tour Packages", mr: "टूर पॅकेजेस", hi: "टूर पैकेज" },
@@ -558,9 +648,10 @@ const I18nManager = (function () {
         { en: "Target Budget (Per Person)", mr: "अपेक्षित बजेट (प्रति व्यक्ती)", hi: "लक्षित बजट (प्रति व्यक्ति)" },
         { en: "Meal & Sightseeing Preferences", mr: "भोजन व प्रेक्षणीय स्थळे पसंती", hi: "भोजन और दर्शनीय स्थल प्राथमिकताएं" },
         { en: "Additional Requests / Itinerary Notes", mr: "अतिरिक्त मागण्या / विशेष नोंदी", hi: "अतिरिक्त अनुरोध / विशेष नोट्स" },
-        { en: "Submit Itinerary Request to Travelkar Team", mr: "ट्रॅव्हलकर टीमला सहल मागणी पाठवा", hi: "ट्रॅव्हलकर टीम को यात्रा अनुरोध भेजें" },
+        { en: "Submit Itinerary Request to Dream Travelkar Team", mr: "ड्रीम ट्रॅव्हलकर टीमला सहल मागणी पाठवा", hi: "ड्रीम ट्रॅवलकर टीम को यात्रा अनुरोध भेजें" },
         { en: "Quick Login as Priya Sharma (Demo)", mr: "प्रिया शर्मा म्हणून लॉगिन करा (डेमो)", hi: "प्रिया शर्मा के रूप में लॉगिन करें (डेमो)" },
         { en: "Travel Date *", mr: "प्रवासाची तारीख *", hi: "यात्रा की तारीख *" },
+        { en: "Number of Guests", mr: "प्रवासी संख्या", hi: "यात्रियों की संख्या" },
         { en: "Number of Travellers", mr: "प्रवासी संख्या", hi: "यात्रियों की संख्या" },
         { en: "Payment Choice", mr: "पेमेंट पर्याय", hi: "भुगतान विकल्प" },
         { en: "Special Requests / Preferences", mr: "विशेष मागण्या / पसंती", hi: "विशेष अनुरोध / प्राथमिकताएं" },
@@ -643,6 +734,12 @@ const I18nManager = (function () {
         { en: "Starting From", mr: "किंमत सुरू", hi: "शुरुआती कीमत" },
         { en: "Explore", mr: "सविस्तर पहा", hi: "विस्तार से देखें" },
         { en: "View All Domestic Destinations", mr: "सर्व देशांतर्गत पर्यटन स्थळे पहा", hi: "सभी घरेलू पर्यटन स्थल देखें" },
+        { en: "A SIGNATURE CITY EXPERIENCE", mr: "खास मुंबई दर्शन अनुभव", hi: "विशेष मुंबई दर्शन अनुभव" },
+        { en: "Explore Mumbai –", mr: "मुंबई दर्शन –", hi: "मुंबई दर्शन –" },
+        { en: "Discover the City of Dreams.", mr: "स्वप्नांच्या शहराचा अनोखा प्रवास.", hi: "सपनों के शहर की यादगार यात्रा।" },
+        { en: "Feel the rhythm of India's most captivating city with a private, thoughtfully guided experience designed for international visitors.", mr: "आंतरराष्ट्रीय आणि देशांतर्गत पर्यटकांसाठी खास डिझाइन केलेल्या खाजगी आणि मार्गदर्शित टूरसह मुंबईचा अनुभव घ्या.", hi: "विदेशी और घरेलू पर्यटकों के लिए विशेष रूप से डिज़ाइन किए गए निजी और विचारशील टूर के साथ मुंबई की धड़कन महसूस करें।" },
+        { en: "Explore Mumbai tours", mr: "मुंबई टूर्स एक्सप्लोर करा", hi: "मुंबई टूर्स एक्सप्लोर करें" },
+        { en: "Food & culture", mr: "खाद्यसंस्कृती व वारसा", hi: "स्ट्रीट फूड और संस्कृति" },
         { en: "World Discovery", mr: "जागतिक पर्यटन", hi: "विश्व भ्रमण" },
         { en: "Immerse in futuristic skylines, tropical island retreats, and historic European landscapes with guaranteed Indian meals and expert local guides.", mr: "आधुनिक शहरे, उष्णकटिबंधीय बेटे आणि युरोपियन सौंदर्य अनुभवा; खात्रीशीर भारतीय भोजन आणि तज्ज्ञ मार्गदर्शकांसह.", hi: "आधुनिक शहर, खूबसूरत द्वीप और ऐतिहासिक यूरोपीय नजारों का अनुभव करें; भारतीय भोजन और स्थानीय गाइड के साथ।" },
         { en: "Bangkok grand temples, Coral Island speedboats, Alcazar shows, and shopping paradises.", mr: "बँकॉकची भव्य मंदिरे, कोरल आयलँड स्पीडबोट, अल्काझार शो आणि खरेदीची नंदनवने.", hi: "बैंकॉक के भव्य मंदिर, कोरल द्वीप स्पीडबोट, अलकाजार शो और शॉपिंग बाजार।" },
@@ -691,12 +788,16 @@ const I18nManager = (function () {
         { en: "Bespoke Travel Planning", mr: "सानुकूल सहल नियोजन", hi: "कस्टमाइज यात्रा योजना" },
         { en: "Overwhelm yourself with the virgin beauty of shimmering lakes, gurgling rivers, proud mountains, beautiful heritage cities and warm loving people.", mr: "चमकणारी सरोवरे, खळखळणाऱ्या नद्या, उत्तुंग पर्वत, ऐतिहासिक शहरे आणि प्रेमळ माणसांच्या सहवासात निसर्गाचा आनंद घ्या.", hi: "चमकती झीलों, कलकल बहती नदियों, भव्य पर्वतों, सुंदर ऐतिहासिक शहरों और स्नेही लोगों के साथ प्रकृति का आनंद लें।" },
         { en: "Just by customizing your journey with us, you unlock tailored hotel categories, private chauffeurs, flexible meal plans, and personalized pacing for senior citizens or families with infants.", mr: "आमच्याकडे सहल कस्टमाइज केल्याने तुम्हाला पसंतीनुसार हॉटेल्स, खाजगी वाहनचालक, आवडीचे जेवण आणि ज्येष्ठ नागरिक वा लहान मुलांसाठी सोयीस्कर वेळापत्रक मिळते.", hi: "हमारे साथ यात्रा कस्टमाइज करके आप अपनी पसंद के होटल, निजी ड्राइवर, लचीली भोजन योजना और वरिष्ठ नागरिकों या बच्चों के लिए आरामदायक समय तय कर सकते हैं।" },
+        { en: "Happy Guests Guided by Dream Travelkar", mr: "ड्रीम ट्रॅव्हलकरचे समाधानी पर्यटक", hi: "ड्रीम ट्रॅवलकर के संतुष्ट पर्यटक" },
+        { en: "Happy Guests Guided", mr: "समाधानी पर्यटकांना मार्गदर्शन", hi: "संतुष्ट पर्यटकों को मार्गदर्शन" },
         { en: "Happy Travellers Guided", mr: "समाधानी प्रवाशांना मार्गदर्शन", hi: "संतुष्ट यात्रियों को मार्गदर्शन" },
         { en: "Hospitality Experience", mr: "पर्यटन क्षेत्रातील अनुभव", hi: "आतिथ्य क्षेत्र का अनुभव" },
+        { en: "Design Your Dream Trip with Dream Travelkar", mr: "ड्रीम ट्रॅव्हलकरसोबत स्वप्नातील सहल डिझाइन करा", hi: "ड्रीम ट्रॅवलकर के साथ सपनों की यात्रा डिजाइन करें" },
         { en: "Design Your Dream Trip", mr: "तुमच्या स्वप्नातील सहल डिझाइन करा", hi: "अपनी सपनों की यात्रा डिजाइन करें" },
         { en: "Destination of Interest *", mr: "आवडीचे पर्यटन स्थळ *", hi: "पसंदीदा गंतव्य स्थान *" },
         { en: "Estimated Budget", mr: "अंदाजे बजेट", hi: "अनुमानित बजट" },
         { en: "Preferences / Special Notes", mr: "विशेष पसंती / नोंदी", hi: "विशेष प्राथमिकताएं / नोट्स" },
+        { en: "Submit Customized Enquiry to Dream Travelkar", mr: "ड्रीम ट्रॅव्हलकरकडे सानुकूल चौकशी पाठवा", hi: "ड्रीम ट्रॅवलकर को कस्टमाइज पूछताछ भेजें" },
         { en: "Submit Customized Enquiry", mr: "सानुकूल चौकशी पाठवा", hi: "कस्टमाइज पूछताछ भेजें" },
         { en: "Standard (₹20k - ₹35k)", mr: "स्टँडर्ड (₹२० हजार - ₹३५ हजार)", hi: "स्टैंडर्ड (₹20 हजार - ₹35 हजार)" },
         { en: "Deluxe (₹35k - ₹60k)", mr: "डिलक्स (₹३५ हजार - ₹६० हजार)", hi: "डीलक्स (₹35 हजार - ₹60 हजार)" },
@@ -1079,8 +1180,8 @@ const I18nManager = (function () {
     function getCurrentLanguage() {
         let saved = localStorage.getItem(STORAGE_KEY);
         if (!saved || !DICTIONARY[saved]) {
-            // Default to Marathi if user started with मी मावळा, else English
-            saved = 'mr';
+            // Default to English as per specification
+            saved = 'en';
         }
         return saved;
     }
@@ -1117,7 +1218,7 @@ const I18nManager = (function () {
         // Desktop Trigger Button Label
         const triggerLabel = document.querySelector('.current-lang-label');
         if (triggerLabel) {
-            if (lang === 'mr') triggerLabel.textContent = 'मी मावळा';
+            if (lang === 'mr') triggerLabel.textContent = 'मराठी';
             else if (lang === 'hi') triggerLabel.textContent = 'हिन्दी';
             else triggerLabel.textContent = 'English';
         }
@@ -1150,9 +1251,14 @@ const I18nManager = (function () {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (dict[key]) {
-                // If element contains child icons or badges, replace only the text node
+                // If element contains child icons or badges, preserve icon position
+                const caret = el.querySelector('.nav-caret, .fa-angle-down, .fa-caret-down');
                 const icon = el.querySelector('i');
-                if (icon) {
+                if (caret) {
+                    el.innerHTML = '';
+                    el.appendChild(document.createTextNode(dict[key] + ' '));
+                    el.appendChild(caret);
+                } else if (icon) {
                     el.innerHTML = '';
                     el.appendChild(icon);
                     el.appendChild(document.createTextNode(' ' + dict[key]));
@@ -1338,7 +1444,7 @@ const I18nManager = (function () {
                     });
 
                     // Show notification
-                    const langNames = { mr: 'मराठी (मी मावळा)', hi: 'हिन्दी (Hindi)', en: 'English' };
+                    const langNames = { mr: 'मराठी', hi: 'हिन्दी (Hindi)', en: 'English' };
                     if (typeof StorageManager !== 'undefined' && StorageManager.showToast) {
                         StorageManager.showToast(`भाषा बदलली: ${langNames[code]}`, 'info');
                     }

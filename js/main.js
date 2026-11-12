@@ -12,13 +12,15 @@ function initApp() {
     // 2. Setup Sticky Header on Scroll
     const header = document.querySelector('.main-header');
     if (header) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 30) {
+        const updateStickyHeader = function () {
+            if (window.scrollY > 20) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
-        });
+        };
+        window.addEventListener('scroll', updateStickyHeader, { passive: true });
+        updateStickyHeader();
     }
 
     // 3. Setup Redesigned Navbar System (Desktop & Mobile)

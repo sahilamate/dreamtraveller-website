@@ -3,11 +3,11 @@
  * Fluid layouts, mobile navigation drawer, and complete multi-device adaptations.
  */
 
-/* Universal Zero-Overflow Guards */
+/* Universal Zero-Overflow Guards (Uses clip to preserve position: sticky) */
 html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     position: relative;
     margin: 0;
     padding: 0;
@@ -17,30 +17,43 @@ html, body {
     box-sizing: border-box;
 }
 
-/* 1. Laptops & Compact Desktops (under 1180px) */
-@media (max-width: 1180px) {
+/* 1. Laptops & Compact Desktops (1141px to 1320px) */
+@media (min-width: 1141px) and (max-width: 1320px) {
+    .main-header .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .header-inner {
+        gap: 12px;
+    }
+    .navbar-nav-section {
+        margin: 0 4px;
+    }
     .nav-menu {
-        gap: 14px;
+        gap: clamp(6px, 0.8vw, 12px);
     }
     .nav-link {
-        font-size: 0.88rem;
+        font-size: 0.84rem;
+        padding: 6px 3px;
     }
-    .navbar-actions-section {
-        gap: 10px;
+    .navbar-actions-section,
+    .header-action-group {
+        gap: 8px;
     }
-    .btn-plan-trip {
-        padding: 9px 16px;
-        font-size: 0.88rem;
+    .btn-plan-trip,
+    .header-quote-btn {
+        padding: 8px 13px;
+        font-size: 0.82rem;
     }
     .lang-trigger-btn,
     .account-user-trigger {
-        padding: 7px 10px;
-        font-size: 0.82rem;
+        padding: 6px 8px;
+        font-size: 0.8rem;
     }
 }
 
-/* 2. Tablets and below (992px and below) - Switch to Mobile Drawer Navigation */
-@media (max-width: 992px) {
+/* 2. Compact Devices, Tablets and below (1140px and below) - Seamless Mobile Drawer Navigation */
+@media (max-width: 1140px) {
     /* Hide desktop top-bar extra items */
     .top-bar-left span.hide-mobile,
     .top-bar-item.hide-mobile,
@@ -111,6 +124,17 @@ html, body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .mum-pkg-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .mum-pkg-card.mum-pkg-card-wide,
+    .mum-pkg-card[style*="grid-column"] {
+        grid-column: span 1 !important;
+        width: 100% !important;
+    }
+
     .footer-top {
         grid-template-columns: repeat(2, 1fr);
         gap: 36px;
@@ -122,16 +146,6 @@ html, body {
 
     .filter-bar-form .btn-filter-submit {
         grid-column: span 2;
-    }
-
-    .admin-layout {
-        flex-direction: column;
-    }
-
-    .admin-sidebar {
-        width: 100% !important;
-        position: relative !important;
-        height: auto !important;
     }
 
     .customer-layout {
@@ -275,6 +289,22 @@ html, body {
     .features-grid,
     .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+
+    .mum-pkg-grid,
+    .attractions-grid,
+    .practical-info-grid,
+    .foreign-reviews-grid,
+    .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .mum-pkg-card,
+    .mum-pkg-card.mum-pkg-card-wide,
+    .mum-pkg-card[style*="grid-column"] {
+        grid-column: span 1 !important;
+        width: 100% !important;
     }
 
     /* Sub-grid and Form column stacking on mobile */
@@ -575,6 +605,18 @@ html, body {
         align-items: stretch !important;
         gap: 12px !important;
         padding-top: 14px !important;
+    }
+
+    .mum-pkg-footer {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 14px !important;
+    }
+
+    .mum-pkg-footer .btn {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
     }
 
     .pkg-price-block {

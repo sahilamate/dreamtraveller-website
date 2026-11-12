@@ -80,9 +80,11 @@ function checkAdminAuth() {
 
     if (isAdminView && !isLoginView) {
         if (!StorageManager.isAdminLogged()) {
-            // Automatically log in for demo convenience if user lands directly on admin
-            StorageManager.setAdminLogged(true);
-            StorageManager.showToast('Demo Admin mode active.', 'info');
+            StorageManager.showToast('Administrator authentication required.', 'error');
+            setTimeout(() => {
+                window.location.href = 'admin-login.html';
+            }, 300);
+            return;
         }
     }
 }
@@ -542,7 +544,9 @@ function initManageEnquiries() {
             <tr>
                 <td><strong>${e.id}</strong><br><small style="color:#64748b;">${StorageManager.formatDate(e.createdAt)}</small></td>
                 <td>
-                    <strong>${e.name}</strong><br>
+                    <strong>${e.name}</strong>
+                    ${e.isInternational ? `<span style="background:#B99A62; color:#142B3B; font-size:0.68rem; font-weight:700; padding:2px 6px; border-radius:4px; margin-left:4px;">INTL (${e.country || 'Overseas'})</span>` : ''}
+                    <br>
                     <small style="color:#64748b;">${e.email}</small>
                 </td>
                 <td>
